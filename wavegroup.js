@@ -6,7 +6,7 @@ export class WaveGroup {
     const root = document.documentElement;
     const rootStyle = getComputedStyle(root);
 
-    this.totalWaves = 5;
+    this.totalWaves = 4;
     this.totalPoints = 5;
 
     this.color = [
@@ -14,8 +14,7 @@ export class WaveGroup {
       "rgba(59,179,113,0.7)",
       "rgba(29,144,255,0.7)",
       "rgba(255,99,72,0.7)",
-      "rgba(238,129,238,0.7)",
-      "rgba(260,260,260,0.4)",
+      "rgba(255,255,255,0.5)",
     ];
 
     this.waves = [];

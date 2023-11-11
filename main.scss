@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
+  word-break: keep-all;
 }
 ul {
   list-style: none;
@@ -13,6 +14,10 @@ a {
 }
 body {
   position: relative;
+}
+#visible {
+  height: 260vh;
+  overflow: hidden;
 }
 
 canvas {
@@ -47,16 +52,29 @@ canvas {
   // theme5 colors
   --theme5-1: #ffb400;
   --theme5-2: #000000;
+
+  // 콘텐트 박스 크기
+  --contentBox: 1480px;
+
+  //svg 컬러 리스트
+  --white: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+    brightness(118%) contrast(116%);
+  --black: invert(0%) sepia(87%) saturate(7465%) hue-rotate(191deg)
+    brightness(97%) contrast(95%);
+  --yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
+    brightness(98%) contrast(106%);
 }
 
 //고정된 첫번째 섹션
 #fixed {
+  background: black;
   position: absolute;
   top: 0%;
   left: 0%;
   width: 100%;
   height: 260vh;
   overflow: hidden;
+  z-index: 10;
   // header navigator
   .first_Page {
     height: 160vh;
@@ -65,7 +83,7 @@ canvas {
       top: 50%;
       right: 50px;
       transform: translateY(-50%);
-      z-index: 10;
+      z-index: 20;
       gap: 60px;
       .svg {
         width: 50px;
@@ -83,10 +101,12 @@ canvas {
   .second_Page {
     position: relative;
     height: 100vh;
+    z-index: 0;
     img {
       width: 700px;
       height: 700px;
       position: absolute;
+      z-index: 15;
       &.shape1 {
         top: -10%;
         left: -5%;
@@ -96,9 +116,9 @@ canvas {
         right: -5%;
       }
       &.shape3 {
-        width: 900px;
-        height: 900px;
-        bottom: -35%;
+        width: 1100px;
+        height: 1100px;
+        bottom: -40%;
         left: 50%;
         transform: translate(-50%);
       }
@@ -108,12 +128,14 @@ canvas {
 
 //움직일 두번째 섹션
 #movement {
+  color: white;
   position: relative;
-  top: 0%;
+  top: -100vh;
   left: 0%;
+  z-index: 20;
 
   // visual
-  #visual {
+  .visual {
     width: 100%;
     height: 160vh;
     position: relative;
@@ -122,7 +144,7 @@ canvas {
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 10;
+      z-index: 20;
       h1 {
         font-family: "Noto Sans KR", sans-serif;
         font-weight: 900;
@@ -241,10 +263,116 @@ canvas {
     }
   }
   .con1 {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 100px;
     .con1_pic {
-      width: 300px;
-      filter: invert(60%) sepia(44%) saturate(1217%) hue-rotate(325deg)
-        brightness(101%) contrast(101%);
+      width: 550px;
+      filter: var(--white);
+    }
+    .con1_text {
+      width: 30%;
+      .discover {
+        font-size: 40px;
+        margin-bottom: 0px;
+        color: var(--theme2-2);
+      }
+      .con1_heading {
+        font-size: 60px;
+        margin-top: 0px;
+      }
+      .underline {
+        display: block;
+        width: 152px;
+        height: 10px;
+        background: var(--theme2-2);
+      }
+      p {
+        font-size: 21px;
+        margin: 50px 0;
+      }
+      h4 {
+        font-size: 25px;
+        margin-bottom: 30px;
+      }
+      .personal_info {
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        gap: 0 30px;
+        ul {
+          margin-bottom: 35px;
+          li {
+            font-size: 18px;
+            margin-bottom: 9px;
+          }
+        }
+      }
+      button {
+        color: white;
+        background: var(--theme2-3);
+        width: 193px;
+        height: 54px;
+        border-radius: 38.5px;
+        border: none;
+        font-size: 16px;
+      }
+      .yel_text {
+        color: var(--theme2-1);
+      }
+    }
+  }
+  .con2 {
+    img {
+      filter: var(--white);
+    }
+    margin: 0 auto;
+    width: var(--contentBox);
+    height: 100vh;
+    .con2_sub_heading {
+      display: flex;
+      align-items: center;
+      .toright,
+      .toleft {
+        width: 32px;
+        height: 32px;
+        filter: var(--yellow);
+      }
+      .toright {
+        margin-left: 30px;
+        transform: rotate(180deg);
+      }
+      .gear {
+        width: 60px;
+        margin: 0 20px 0 30px;
+      }
+      .con_dot {
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--theme2-1);
+        transform: translateY(-10px);
+      }
+      h3 {
+        font-size: 40px;
+        font-weight: 900;
+        position: relative;
+        &::after {
+          content: "DEV LANGUAGE";
+          width: 520px;
+          font-weight: 900;
+          font-size: 45px;
+          opacity: 10%;
+          position: absolute;
+          left: -20px;
+          top: -10px;
+        }
+      }
     }
   }
 }
