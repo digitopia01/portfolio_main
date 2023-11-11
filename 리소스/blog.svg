@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 76">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .08em;
+      }
+
+      .cls-2 {
+        letter-spacing: .08em;
+      }
+
+      .cls-3 {
+        letter-spacing: .07em;
+      }
+
+      .cls-4 {
+        letter-spacing: .07em;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 7px;
+      }
+
+      .cls-7 {
+        font-family: AcuminConcept-Black, 'Acumin Variable Concept';
+        font-size: 15px;
+        font-variation-settings: 'wght' 800, 'wdth' 100, 'slnt' 0;
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-5" d="m65.41,3.5H10.59c-3.92,0-7.09,3.18-7.09,7.09v54.82c0,3.92,3.18,7.09,7.09,7.09h54.82c3.92,0,7.09-3.18,7.09-7.09V10.59c0-3.92-3.18-7.09-7.09-7.09Zm5.93,13.84H5.34v-5.04c0-4.4,3.56-7.96,7.96-7.96h50.08c4.4,0,7.96,3.56,7.96,7.96v5.04Z"/>
+    <path class="cls-6" d="m63.38,4.34H13.3c-4.4,0-7.96,3.56-7.96,7.96v5.04h66v-5.04c0-4.4-3.56-7.96-7.96-7.96Z"/>
+  </g>
+  <g>
+    <text class="cls-7" transform="translate(14.25 36.85)"><tspan class="cls-3" x="0" y="0">B</tspan><tspan class="cls-4" x="11.7" y="0">L</tspan><tspan class="cls-2" x="21.87" y="0">O</tspan><tspan class="cls-1" x="34.79" y="0">G</tspan></text>
+    <g>
+      <rect x="15.5" y="43.84" width="20" height="3"/>
+      <rect x="15.5" y="49.84" width="20" height="3"/>
+      <rect x="15.5" y="55.84" width="20" height="3"/>
+      <rect x="39.5" y="43.84" width="21" height="15"/>
+    </g>
+  </g>
+</svg>
