@@ -83,18 +83,17 @@ canvas {
       top: 50%;
       right: 50px;
       transform: translateY(-50%);
-      z-index: 20;
+      z-index: 30;
       gap: 60px;
       .svg {
         width: 50px;
         height: 50px;
-        filter: invert(74%) sepia(67%) saturate(1725%) hue-rotate(359deg)
-          brightness(103%) contrast(101%);
+        filter: var(--white);
       }
       .navigator {
-        display: flex;
         flex-direction: column;
         gap: 20px 0;
+        display: none;
       }
     }
   }
@@ -130,7 +129,7 @@ canvas {
 #movement {
   color: white;
   position: relative;
-  top: -100vh;
+  // top: -100vh;
   left: 0%;
   z-index: 20;
 
@@ -327,6 +326,27 @@ canvas {
     }
   }
   .con2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .con2_heading {
+      font-size: 60px;
+      font-weight: 900;
+      line-height: 50px;
+      display: flex;
+      .upperline {
+        display: block;
+        width: 13.5px;
+        height: 3px;
+        background: white;
+        transform: translateY(10px);
+      }
+      .colored_heading {
+        font-size: 40px;
+        vertical-align: top;
+        // color: var(--theme5-2);
+      }
+    }
     img {
       filter: var(--white);
     }
@@ -336,6 +356,35 @@ canvas {
     .con2_sub_heading {
       display: flex;
       align-items: center;
+      position: relative;
+      margin: 140px 0 70px 0;
+      .dev_lang_heading {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        &.active {
+          transform: translate(-20px);
+          opacity: 0;
+        }
+      }
+      .design_heading {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 30px;
+        transform: translate(-20px);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        &.active {
+          transform: translate(0px);
+          opacity: 1;
+        }
+      }
+      .appear {
+        cursor: pointer;
+        z-index: 10;
+      }
       .toright,
       .toleft {
         width: 32px;
@@ -347,7 +396,7 @@ canvas {
         transform: rotate(180deg);
       }
       .gear {
-        width: 60px;
+        width: 80px;
         margin: 0 20px 0 30px;
       }
       .con_dot {
@@ -358,7 +407,7 @@ canvas {
         background: var(--theme2-1);
         transform: translateY(-10px);
       }
-      h3 {
+      .dev {
         font-size: 40px;
         font-weight: 900;
         position: relative;
@@ -371,6 +420,95 @@ canvas {
           position: absolute;
           left: -20px;
           top: -10px;
+        }
+      }
+      .design {
+        font-size: 40px;
+        font-weight: 900;
+        position: relative;
+        &::after {
+          content: "DESIGN TOOLS";
+          width: 520px;
+          font-weight: 900;
+          font-size: 45px;
+          opacity: 10%;
+          position: absolute;
+          left: -20px;
+          top: -10px;
+        }
+      }
+    }
+  }
+  .con2_main_lists {
+    .dev_lang_lists {
+      transform: translate(40px);
+      display: flex;
+      justify-content: space-between;
+      > li {
+        width: 260px;
+        align-items: center;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 6px;
+          background: var(--theme2-1);
+          position: absolute;
+          top: 30px;
+          left: -42px;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 136px;
+          height: 6px;
+          background: var(--theme2-1);
+          position: absolute;
+          top: 30px;
+          right: 0;
+        }
+        img {
+          width: 100px;
+        }
+        h3 {
+          font-size: 30px;
+          margin: 17px 0 14px;
+        }
+        .list_description {
+          height: 250px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px 0;
+          li {
+            position: relative;
+            font-size: 18px;
+            width: 217px;
+            &::before {
+              content: url("../img/triangle.svg");
+              transform: rotate(180deg);
+              filter: var(--white);
+              width: 13px;
+              position: absolute;
+              top: 2px;
+              left: -20px;
+            }
+          }
+        }
+      }
+      > li:not(:first-child) {
+        &::after {
+          content: "";
+          display: block;
+          width: 178px;
+          height: 6px;
+          background: var(--theme2-1);
+          position: absolute;
+          top: 30px;
+          right: 0;
+        }
+        img {
+          width: 60px;
         }
       }
     }

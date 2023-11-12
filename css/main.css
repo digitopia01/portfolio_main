@@ -75,18 +75,18 @@ canvas {
   top: 50%;
   right: 50px;
   transform: translateY(-50%);
-  z-index: 20;
+  z-index: 30;
   gap: 60px;
 }
 #fixed .first_Page header .svg {
   width: 50px;
   height: 50px;
-  filter: invert(74%) sepia(67%) saturate(1725%) hue-rotate(359deg) brightness(103%) contrast(101%);
+  filter: var(--white);
 }
 #fixed .first_Page header .navigator {
-  display: flex;
   flex-direction: column;
   gap: 20px 0;
+  display: none;
 }
 #fixed .second_Page {
   position: relative;
@@ -118,7 +118,6 @@ canvas {
 #movement {
   color: white;
   position: relative;
-  top: -100vh;
   left: 0%;
   z-index: 20;
 }
@@ -301,9 +300,29 @@ canvas {
   color: var(--theme2-1);
 }
 #movement .con2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   width: var(--contentBox);
   height: 100vh;
+}
+#movement .con2 .con2_heading {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 50px;
+  display: flex;
+}
+#movement .con2 .con2_heading .upperline {
+  display: block;
+  width: 13.5px;
+  height: 3px;
+  background: white;
+  transform: translateY(10px);
+}
+#movement .con2 .con2_heading .colored_heading {
+  font-size: 40px;
+  vertical-align: top;
 }
 #movement .con2 img {
   filter: var(--white);
@@ -311,6 +330,35 @@ canvas {
 #movement .con2 .con2_sub_heading {
   display: flex;
   align-items: center;
+  position: relative;
+  margin: 140px 0 70px 0;
+}
+#movement .con2 .con2_sub_heading .dev_lang_heading {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+#movement .con2 .con2_sub_heading .dev_lang_heading.active {
+  transform: translate(-20px);
+  opacity: 0;
+}
+#movement .con2 .con2_sub_heading .design_heading {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  transform: translate(-20px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+#movement .con2 .con2_sub_heading .design_heading.active {
+  transform: translate(0px);
+  opacity: 1;
+}
+#movement .con2 .con2_sub_heading .appear {
+  cursor: pointer;
+  z-index: 10;
 }
 #movement .con2 .con2_sub_heading .toright,
 #movement .con2 .con2_sub_heading .toleft {
@@ -323,7 +371,7 @@ canvas {
   transform: rotate(180deg);
 }
 #movement .con2 .con2_sub_heading .gear {
-  width: 60px;
+  width: 80px;
   margin: 0 20px 0 30px;
 }
 #movement .con2 .con2_sub_heading .con_dot {
@@ -334,12 +382,12 @@ canvas {
   background: var(--theme2-1);
   transform: translateY(-10px);
 }
-#movement .con2 .con2_sub_heading h3 {
+#movement .con2 .con2_sub_heading .dev {
   font-size: 40px;
   font-weight: 900;
   position: relative;
 }
-#movement .con2 .con2_sub_heading h3::after {
+#movement .con2 .con2_sub_heading .dev::after {
   content: "DEV LANGUAGE";
   width: 520px;
   font-weight: 900;
@@ -348,4 +396,89 @@ canvas {
   position: absolute;
   left: -20px;
   top: -10px;
+}
+#movement .con2 .con2_sub_heading .design {
+  font-size: 40px;
+  font-weight: 900;
+  position: relative;
+}
+#movement .con2 .con2_sub_heading .design::after {
+  content: "DESIGN TOOLS";
+  width: 520px;
+  font-weight: 900;
+  font-size: 45px;
+  opacity: 10%;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+}
+#movement .con2_main_lists .dev_lang_lists {
+  transform: translate(40px);
+  display: flex;
+  justify-content: space-between;
+}
+#movement .con2_main_lists .dev_lang_lists > li {
+  width: 260px;
+  align-items: center;
+  position: relative;
+}
+#movement .con2_main_lists .dev_lang_lists > li::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 6px;
+  background: var(--theme2-1);
+  position: absolute;
+  top: 30px;
+  left: -42px;
+}
+#movement .con2_main_lists .dev_lang_lists > li::after {
+  content: "";
+  display: block;
+  width: 136px;
+  height: 6px;
+  background: var(--theme2-1);
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+#movement .con2_main_lists .dev_lang_lists > li img {
+  width: 100px;
+}
+#movement .con2_main_lists .dev_lang_lists > li h3 {
+  font-size: 30px;
+  margin: 17px 0 14px;
+}
+#movement .con2_main_lists .dev_lang_lists > li .list_description {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+#movement .con2_main_lists .dev_lang_lists > li .list_description li {
+  position: relative;
+  font-size: 18px;
+  width: 217px;
+}
+#movement .con2_main_lists .dev_lang_lists > li .list_description li::before {
+  content: url("../img/triangle.svg");
+  transform: rotate(180deg);
+  filter: var(--white);
+  width: 13px;
+  position: absolute;
+  top: 2px;
+  left: -20px;
+}
+#movement .con2_main_lists .dev_lang_lists > li:not(:first-child)::after {
+  content: "";
+  display: block;
+  width: 178px;
+  height: 6px;
+  background: var(--theme2-1);
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+#movement .con2_main_lists .dev_lang_lists > li:not(:first-child) img {
+  width: 60px;
 }

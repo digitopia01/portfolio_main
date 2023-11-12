@@ -1,3 +1,4 @@
+// wave.js
 import { Point } from "./point.js";
 
 export class Wave {
@@ -6,6 +7,8 @@ export class Wave {
     this.totalPoints = totalPoints;
     this.color = color;
     this.points = [];
+
+    this.init();
   }
 
   resize(stageWidth, stageHeight) {
@@ -21,14 +24,10 @@ export class Wave {
   }
 
   init() {
-    this.point = new Point(this.centerX, this.centerY);
+    this.points = [];
 
     for (let i = 0; i < this.totalPoints; i++) {
-      const point = new Point(
-        this.index + i, //prettier-ignore
-        this.pointGap * i, //prettier-ignore
-        this.centerY //prettier-ignore
-      );
+      const point = new Point(this.index + i, this.pointGap * i, this.centerY);
       this.points[i] = point;
     }
   }
@@ -55,6 +54,7 @@ export class Wave {
       prevX = this.points[i].x;
       prevY = this.points[i].y;
     }
+
     ctx.lineTo(prevX, prevY);
     ctx.lineTo(this.stageWidth, this.stageHeight);
     ctx.lineTo(this.points[0].x, this.stageHeight);

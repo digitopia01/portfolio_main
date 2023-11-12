@@ -1,8 +1,9 @@
+// app.js
 import { WaveGroup } from "./wavegroup.js";
 
 class App {
   constructor() {
-    this.visual = document.querySelector("#visual");
+    this.visual = document.querySelector(".visual");
 
     this.canvas = document.createElement("canvas");
     this.ctx = this.canvas.getContext("2d");
@@ -10,10 +11,29 @@ class App {
 
     this.waveGroup = new WaveGroup();
 
+    this.themes = document.querySelectorAll(".theme");
+    this.setupThemeClick();
+
     window.addEventListener("resize", this.resize.bind(this), false);
     this.resize();
 
     requestAnimationFrame(this.animate.bind(this));
+  }
+
+  setupThemeClick() {
+    this.themes.forEach((item) => {
+      item.addEventListener("click", this.handleThemeClick.bind(this));
+    });
+  }
+
+  handleThemeClick(event) {
+    const rootStyle = getComputedStyle(document.documentElement);
+    const themeIndex = Array.from(this.themes).indexOf(event.currentTarget);
+
+    if (themeIndex >= 0) {
+      this.waveGroup.updateThemeColor(themeIndex, rootStyle);
+    }
+    console.log("Clicked theme index:", themeIndex);
   }
 
   resize() {
@@ -35,24 +55,6 @@ class App {
     requestAnimationFrame(this.animate.bind(this));
   }
 }
-
-const themes = document.querySelectorAll(".theme");
-const waveGroup = new WaveGroup();
-
-function handleClick(event) {
-  const root = document.documentElement;
-  const rootStyle = getComputedStyle(document.documentElement);
-  const themeIndex = Array.from(themes).indexOf(event.currentTarget);
-
-  if (themeIndex >= 0) {
-    waveGroup.updateThemeColor(themeIndex, rootStyle);
-  }
-  console.log("Clicked theme index:", themeIndex);
-}
-
-themes.forEach((item) => {
-  item.addEventListener("click", handleClick);
-});
 
 window.onload = () => {
   new App();
