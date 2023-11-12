@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +34,7 @@ canvas {
 }
 
 :root {
+  /* 테마 컬러 설정 */
   --theme1-1: #f8f8f8;
   --theme1-2: #5f7a75;
   --theme1-3: #d2b6a0;
@@ -48,7 +50,9 @@ canvas {
   --theme4-2: #000000;
   --theme5-1: #ffb400;
   --theme5-2: #000000;
+  /* 콘텐트 박스 크기 */
   --contentBox: 1480px;
+  /* svg 컬러 리스트 */
   --white: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
     brightness(118%) contrast(116%);
   --black: invert(0%) sepia(87%) saturate(7465%) hue-rotate(191deg)
@@ -57,6 +61,7 @@ canvas {
     brightness(98%) contrast(106%);
 }
 
+/* 고정된 첫번째 섹션 */
 #fixed {
   background: black;
   position: absolute;
@@ -66,6 +71,7 @@ canvas {
   height: 260vh;
   overflow: hidden;
   z-index: 10;
+  /* header navigator */
 }
 #fixed .first_Page {
   height: 160vh;
@@ -115,11 +121,14 @@ canvas {
   transform: translate(-50%);
 }
 
+/* 움직일 두번째 섹션. */
 #movement {
   color: white;
   position: relative;
+  /* top: -100vh; */
   left: 0%;
   z-index: 20;
+  /* visual */
 }
 #movement .visual {
   width: 100%;
@@ -323,6 +332,7 @@ canvas {
 #movement .con2 .con2_heading .colored_heading {
   font-size: 40px;
   vertical-align: top;
+  /* color: var(--theme5-2); */
 }
 #movement .con2 img {
   filter: var(--white);
