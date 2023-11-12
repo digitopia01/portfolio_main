@@ -22,3 +22,8 @@
 
 - con1 - html,css 구현 완료
 - con2 - sub_heading 까지 구현 완료
+
+#### 2023-11-12
+
+- con2 - main contents 까지 총 70% 가량 구현 완료
+- 깃허브 push 하였으나 css 미적용 버그 발생하여 scss 파일 주석을 `//` 에서 `/**/`로 변경하여 디버깅 완료
