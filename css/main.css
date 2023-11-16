@@ -1,12 +1,4 @@
 @charset "UTF-8";
-/* readme.md css */
-.vertical_align {
-  display: flex;
-  justify-content: center;
-  gap: 0 10px;
-}
-
-/**/
 * {
   margin: 0;
   padding: 0;

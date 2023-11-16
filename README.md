@@ -35,7 +35,7 @@
   - 디버깅 내용 : main.scss 에서 선택자, 선택자 syntax가 크롬에서 동작안됨 확인하여 각각 따로 스타일 적용하여 디버깅
     <img src="img/forreadme3.png">
 
-<div class="vertical_align">
+<div class="vertical_align" style="display:flex; justify-content: center; gap: 0 10px;">
 
 ##### 디버깅 전
 
