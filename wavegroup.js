@@ -11,7 +11,7 @@ export class WaveGroup {
       "rgba(52,115,255,0.7)",
       "rgba(255,206,50,0.7)",
       "rgba(254,58,74,0.7)",
-      "rgba(255,255,255,0.7)",
+      "rgba(0,0,0,1)",
     ];
 
     this.waves = Array.from(

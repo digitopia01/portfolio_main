@@ -18,10 +18,12 @@ a {
 
 body {
   position: relative;
+  /* 일단 body 배경 블랙 설정 */
+  background: black;
 }
 
 #visible {
-  height: 260vh;
+  /* height: 260vh; --나중에 활성화해놓을 것 */
   overflow: hidden;
 }
 
@@ -341,7 +343,7 @@ canvas {
   display: flex;
   align-items: center;
   position: relative;
-  margin: 140px 0 70px 0;
+  margin: 140px 0 120px 0;
 }
 #movement .con2 .con2_sub_heading .dev_lang_heading {
   display: flex;
@@ -422,64 +424,44 @@ canvas {
   left: -20px;
   top: -10px;
 }
+#movement .con2_main_lists {
+  position: relative;
+  height: 390px;
+}
 #movement .con2_main_lists .dev_lang_lists {
-  transform: translate(40px);
   display: flex;
-  justify-content: space-between;
+  opacity: 1;
+  transform: translateX(0px);
 }
-#movement .con2_main_lists .dev_lang_lists > li {
-  width: 260px;
-  align-items: center;
-  position: relative;
+#movement .con2_main_lists .dev_lang_lists.active {
+  opacity: 0;
+  transform: translateX(-20px);
 }
-#movement .con2_main_lists .dev_lang_lists > li::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 6px;
-  background: var(--theme2-1);
-  position: absolute;
-  top: 30px;
-  left: -42px;
+#movement .con2_main_lists .dev_lang_lists .nodejs {
+  width: 55px !important;
 }
-#movement .con2_main_lists .dev_lang_lists > li::after {
-  content: "";
-  display: block;
-  width: 136px;
-  height: 6px;
-  background: var(--theme2-1);
-  position: absolute;
-  top: 30px;
-  right: 0;
+#movement .con2_main_lists .dev_lang_lists .reactjs {
+  width: 68px !important;
 }
-#movement .con2_main_lists .dev_lang_lists > li img {
-  width: 100px;
+#movement .con2_main_lists .design_lists {
+  opacity: 0;
+  transform: translateX(-20px);
+  z-index: -1;
 }
-#movement .con2_main_lists .dev_lang_lists > li h3 {
-  font-size: 30px;
-  margin: 17px 0 14px;
-}
-#movement .con2_main_lists .dev_lang_lists > li .list_description {
-  height: 250px;
+#movement .con2_main_lists .design_lists.active {
+  opacity: 1;
+  transform: translateX(0px);
   display: flex;
-  flex-direction: column;
-  gap: 8px 0;
+  z-index: 10;
 }
-#movement .con2_main_lists .dev_lang_lists > li .list_description li {
-  position: relative;
-  font-size: 18px;
-  width: 217px;
+#movement .con2_main_lists .design_lists .photoshop {
+  width: 60px;
 }
-#movement .con2_main_lists .dev_lang_lists > li .list_description li::before {
-  content: url("../img/triangle.svg");
-  transform: rotate(180deg);
-  filter: var(--white);
-  width: 13px;
-  position: absolute;
-  top: 2px;
-  left: -20px;
+#movement .con2_main_lists .design_lists .figma {
+  width: 38px !important;
+  transform: translatex(10px);
 }
-#movement .con2_main_lists .dev_lang_lists > li:not(:first-child)::after {
+#movement .con2_main_lists .design_lists > li:first-child::after {
   content: "";
   display: block;
   width: 178px;
@@ -489,6 +471,86 @@ canvas {
   top: 30px;
   right: 0;
 }
-#movement .con2_main_lists .dev_lang_lists > li:not(:first-child) img {
+#movement .con2_main_lists .dev_lang_lists,
+#movement .con2_main_lists .design_lists {
+  width: var(--contentBox);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+#movement .con2_main_lists .dev_lang_lists > li,
+#movement .con2_main_lists .design_lists > li {
+  width: 260px;
+  align-items: center;
+  position: relative;
+}
+#movement .con2_main_lists .dev_lang_lists > li::before,
+#movement .con2_main_lists .design_lists > li::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 6px;
+  background: var(--theme2-1);
+  position: absolute;
+  top: 30px;
+  left: -42px;
+}
+#movement .con2_main_lists .dev_lang_lists > li::after,
+#movement .con2_main_lists .design_lists > li::after {
+  content: "";
+  display: block;
+  width: 136px;
+  height: 6px;
+  background: var(--theme2-1);
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+#movement .con2_main_lists .dev_lang_lists > li img,
+#movement .con2_main_lists .design_lists > li img {
+  width: 100px;
+}
+#movement .con2_main_lists .dev_lang_lists > li h3,
+#movement .con2_main_lists .design_lists > li h3 {
+  font-size: 30px;
+  margin: 17px 0 14px;
+}
+#movement .con2_main_lists .dev_lang_lists > li .list_description,
+#movement .con2_main_lists .design_lists > li .list_description {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+#movement .con2_main_lists .dev_lang_lists > li .list_description li,
+#movement .con2_main_lists .design_lists > li .list_description li {
+  position: relative;
+  font-size: 18px;
+  width: 217px;
+}
+#movement .con2_main_lists .dev_lang_lists > li .list_description li::before,
+#movement .con2_main_lists .design_lists > li .list_description li::before {
+  content: url("../img/triangle.svg");
+  transform: rotate(180deg);
+  filter: var(--white);
+  width: 13px;
+  position: absolute;
+  top: 2px;
+  left: -20px;
+}
+#movement .con2_main_lists .dev_lang_lists > li:not(:first-child)::after,
+#movement .con2_main_lists .design_lists > li:not(:first-child)::after {
+  content: "";
+  display: block;
+  width: 178px;
+  height: 6px;
+  background: var(--theme2-1);
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+#movement .con2_main_lists .dev_lang_lists > li:not(:first-child) img,
+#movement .con2_main_lists .design_lists > li:not(:first-child) img {
   width: 60px;
 }

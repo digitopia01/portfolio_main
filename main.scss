@@ -14,9 +14,11 @@ a {
 }
 body {
   position: relative;
+  /* 일단 body 배경 블랙 설정 */
+  background: black;
 }
 #visible {
-  height: 260vh;
+  /* height: 260vh; --나중에 활성화해놓을 것 */
   overflow: hidden;
 }
 
@@ -353,7 +355,7 @@ canvas {
       display: flex;
       align-items: center;
       position: relative;
-      margin: 140px 0 70px 0;
+      margin: 140px 0 120px 0;
       .dev_lang_heading {
         display: flex;
         align-items: center;
@@ -436,10 +438,61 @@ canvas {
     }
   }
   .con2_main_lists {
+    position: relative;
+    height: 390px;
     .dev_lang_lists {
-      transform: translate(40px);
+      display: flex;
+      opacity: 1;
+      transform: translateX(0px);
+      &.active {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      .nodejs {
+        width: 55px !important;
+      }
+      .reactjs {
+        width: 68px !important;
+      }
+    }
+    .design_lists {
+      opacity: 0;
+      transform: translateX(-20px);
+      z-index: -1;
+      &.active {
+        opacity: 1;
+        transform: translateX(0px);
+        display: flex;
+        z-index: 10;
+      }
+      .photoshop {
+        width: 60px;
+      }
+      .figma {
+        width: 38px !important;
+        transform: translatex(10px);
+      }
+      > li:first-child {
+        &::after {
+          content: "";
+          display: block;
+          width: 178px;
+          height: 6px;
+          background: var(--theme2-1);
+          position: absolute;
+          top: 30px;
+          right: 0;
+        }
+      }
+    }
+    .dev_lang_lists,
+    .design_lists {
+      width: var(--contentBox);
       display: flex;
       justify-content: space-between;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+
       > li {
         width: 260px;
         align-items: center;
