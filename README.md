@@ -1,3 +1,11 @@
+<style>
+    .vertical_align{
+        display:flex;
+        justify-content:center;
+        gap:0 10px;
+    }
+</style>
+
 ## 나현국의 포트폴리오 메인 홈페이지.
 
 안녕하세요 나현국입니다.
@@ -35,6 +43,8 @@
   - 디버깅 내용 : main.scss 에서 선택자, 선택자 syntax가 크롬에서 동작안됨 확인하여 각각 따로 스타일 적용하여 디버깅
     <img src="img/forreadme3.png">
 
+<div class="vertical_align">
+
 ##### 디버깅 전
 
 <img src="img/forreadme2.png" style="width:50%">
@@ -42,3 +52,5 @@
 ##### 디버깅 후
 
 <img src="img/forreadme4.png" style="width:50%">
+
+</div>
