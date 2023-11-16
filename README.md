@@ -1,3 +1,4 @@
+<head>
 <style>
     .vertical_align{
         display:flex;
@@ -5,6 +6,7 @@
         gap:0 10px;
     }
 </style>
+</head>
 
 ## 나현국의 포트폴리오 메인 홈페이지.
 
