@@ -40,11 +40,11 @@
 <div>
 ##### 디버깅 전
 
-<img src="img/forreadme2.png" style="width:90%">
+<img src="img/forreadme2.png" style="width:47%">
 </div>
 <div>
 ##### 디버깅 후
 
-<img src="img/forreadme4.png" style="width:90%">
+<img src="img/forreadme4.png" style="width:47%">
 </div>
 </div>
