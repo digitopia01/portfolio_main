@@ -35,18 +35,15 @@
   - 디버깅 내용 : main.scss 에서 선택자, 선택자 syntax가 크롬에서 동작안됨 확인하여 각각 따로 스타일 적용하여 디버깅
     <img src="img/forreadme3.png" style="width:30%">
 
-<div class="vertical_align" style="display:flex;">
-
 <div>
 
-##### 디버깅 전
+### 디버깅 전
 
 <img src="img/forreadme2.png" style="width:60%; margin:0 auto">
 </div>
 <div>
 
-##### 디버깅 후
+### 디버깅 후
 
 <img src="img/forreadme4.png" style="width:60%; margin:0 auto">
-</div>
 </div>
