@@ -31,5 +31,7 @@
 #### 2023-11-16
 
 - con2 - main contents 구조 및 js 동작까지 구축완료
+- 깃허브 push 후 확인시 css스타일 버그 발생하여 확인 후 디버깅 완료
+  - 디버깅 내용 :
 
 <img src="img/forreadme2.png">
