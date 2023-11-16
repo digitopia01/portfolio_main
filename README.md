@@ -31,3 +31,5 @@
 #### 2023-11-16
 
 - con2 - main contents 구조 및 js 동작까지 구축완료
+
+<img src="img/forreadme2.png">
