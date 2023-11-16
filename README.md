@@ -32,7 +32,9 @@
 
 - con2 - main contents 구조 및 js 동작까지 구축완료
 - 깃허브 push 후 확인시 css스타일 버그 발생하여 확인 후 디버깅 완료
+
   - 디버깅 내용 : main.scss 에서 선택자, 선택자 syntax가 크롬에서 동작안됨 확인하여 각각 따로 스타일 적용하여 디버깅
+
     <img src="img/forreadme3.png" style="width:30%">
 
 ### 디버깅 전
