@@ -440,25 +440,83 @@ canvas {
   .con2_main_lists {
     position: relative;
     height: 390px;
-    .dev_lang_lists {
-      display: flex;
-      opacity: 1;
-      transform: translateX(0px);
-      &.active {
-        opacity: 0;
-        transform: translateX(-20px);
-      }
-      .nodejs {
-        width: 55px !important;
-      }
-      .reactjs {
-        width: 68px !important;
-      }
-    }
     .design_lists {
       opacity: 0;
       transform: translateX(-20px);
       z-index: -1;
+      width: var(--contentBox);
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+
+      > li {
+        width: 260px;
+        align-items: center;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 6px;
+          background: var(--theme2-1);
+          position: absolute;
+          top: 30px;
+          left: -42px;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 136px;
+          height: 6px;
+          background: var(--theme2-1);
+          position: absolute;
+          top: 30px;
+          right: 0;
+        }
+        img {
+          width: 100px;
+        }
+        h3 {
+          font-size: 30px;
+          margin: 17px 0 14px;
+        }
+        .list_description {
+          height: 250px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px 0;
+          li {
+            position: relative;
+            font-size: 18px;
+            width: 217px;
+            &::before {
+              content: url("../img/triangle.svg");
+              transform: rotate(180deg);
+              filter: var(--white);
+              width: 13px;
+              position: absolute;
+              top: 2px;
+              left: -20px;
+            }
+          }
+        }
+      }
+      > li:not(:first-child) {
+        &::after {
+          content: "";
+          display: block;
+          width: 178px;
+          height: 6px;
+          background: var(--theme2-1);
+          position: absolute;
+          top: 30px;
+          right: 0;
+        }
+        img {
+          width: 60px;
+        }
+      }
       &.active {
         opacity: 1;
         transform: translateX(0px);
@@ -485,14 +543,24 @@ canvas {
         }
       }
     }
-    .dev_lang_lists,
-    .design_lists {
+    .dev_lang_lists {
       width: var(--contentBox);
-      display: flex;
       justify-content: space-between;
       position: absolute;
       transition: all 0.3s ease-in-out;
-
+      display: flex;
+      opacity: 1;
+      transform: translateX(0px);
+      &.active {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      .nodejs {
+        width: 55px !important;
+      }
+      .reactjs {
+        width: 68px !important;
+      }
       > li {
         width: 260px;
         align-items: center;
