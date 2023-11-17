@@ -818,13 +818,17 @@ canvas {
     button {
       margin: 60px auto 0;
       width: 220px;
-      height: 65px;
+      padding: 14px 0;
       border-radius: 50px;
       background: #c9a9a9;
       color: white;
       font-size: 25px;
       font-weight: bolder;
       border: none;
+      cursor: pointer;
     }
+  }
+  footer {
+    height: 40vh;
   }
 }
