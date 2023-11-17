@@ -758,4 +758,73 @@ canvas {
       }
     }
   }
+  .con4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: var(--contentBox);
+    height: 100vh;
+    .con4_heading {
+      font-size: 60px;
+      font-weight: 900;
+      line-height: 50px;
+      display: flex;
+      margin-bottom: 80px;
+      .upperline {
+        display: block;
+        width: 13.5px;
+        height: 3px;
+        background: white;
+        transform: translateY(10px);
+      }
+      .colored_heading {
+        font-size: 40px;
+        vertical-align: top;
+        /* color: var(--theme5-2); */
+      }
+    }
+    .con4_lists {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 45px;
+      li {
+        width: calc(90% / 4);
+        border-radius: 3px;
+        background: #eee;
+        color: #222;
+        .thumbnail {
+          height: 150px;
+          background: #00abe4;
+          border-radius: 3px 3px 0 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 40px;
+        }
+        .lists_texts {
+          padding: 30px;
+          h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    button {
+      margin: 60px auto 0;
+      width: 220px;
+      height: 65px;
+      border-radius: 50px;
+      background: #c9a9a9;
+      color: white;
+      font-size: 25px;
+      font-weight: bolder;
+      border: none;
+    }
+  }
 }

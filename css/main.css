@@ -734,3 +734,72 @@ canvas {
   text-align: center;
   margin: 60px 0 0 0;
 }
+#movement .con4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: var(--contentBox);
+  height: 100vh;
+}
+#movement .con4 .con4_heading {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 50px;
+  display: flex;
+  margin-bottom: 80px;
+}
+#movement .con4 .con4_heading .upperline {
+  display: block;
+  width: 13.5px;
+  height: 3px;
+  background: white;
+  transform: translateY(10px);
+}
+#movement .con4 .con4_heading .colored_heading {
+  font-size: 40px;
+  vertical-align: top;
+  /* color: var(--theme5-2); */
+}
+#movement .con4 .con4_lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 45px;
+}
+#movement .con4 .con4_lists li {
+  width: 22.5%;
+  border-radius: 3px;
+  background: #eee;
+  color: #222;
+}
+#movement .con4 .con4_lists li .thumbnail {
+  height: 150px;
+  background: #00abe4;
+  border-radius: 3px 3px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+#movement .con4 .con4_lists li .lists_texts {
+  padding: 30px;
+}
+#movement .con4 .con4_lists li .lists_texts h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+#movement .con4 .con4_lists li .lists_texts p {
+  font-size: 15px;
+}
+#movement .con4 button {
+  margin: 60px auto 0;
+  width: 220px;
+  height: 65px;
+  border-radius: 50px;
+  background: #c9a9a9;
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  border: none;
+}
