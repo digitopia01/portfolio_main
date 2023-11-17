@@ -39,8 +39,12 @@
 
 ### 디버깅 전
 
-<img src="img/forreadme2.png">
+<img src="img/forreadme2.png">   
+   
+### 디버깅 후   
+   
+<img src="img/forreadme4.png">   
+   
+#### 2023-11-17
 
-### 디버깅 후
-
-<img src="img/forreadme4.png">
+- con3 - 구축 완료
