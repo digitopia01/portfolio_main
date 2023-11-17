@@ -54,6 +54,7 @@ canvas {
   --theme5-2: #000000;
   /* 콘텐트 박스 크기 */
   --contentBox: 1480px;
+  --innerContentBox: 1200px;
   /* svg 컬러 리스트 */
   --white: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
     brightness(118%) contrast(116%);
@@ -435,7 +436,7 @@ canvas {
   width: var(--contentBox);
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: relative;
   transition: all 0.3s ease-in-out;
 }
 #movement .con2_main_lists .design_lists > li {
@@ -452,16 +453,6 @@ canvas {
   position: absolute;
   top: 30px;
   left: -42px;
-}
-#movement .con2_main_lists .design_lists > li::after {
-  content: "";
-  display: block;
-  width: 136px;
-  height: 6px;
-  background: var(--theme2-1);
-  position: absolute;
-  top: 30px;
-  right: 0;
 }
 #movement .con2_main_lists .design_lists > li img {
   width: 100px;
@@ -514,7 +505,10 @@ canvas {
 }
 #movement .con2_main_lists .design_lists .figma {
   width: 38px !important;
-  transform: translatex(10px);
+  transform: translateX(15px);
+}
+#movement .con2_main_lists .design_lists .adobeXD {
+  transform: translateX(2px);
 }
 #movement .con2_main_lists .design_lists > li:first-child::after {
   content: "";
@@ -541,6 +535,7 @@ canvas {
 }
 #movement .con2_main_lists .dev_lang_lists .nodejs {
   width: 55px !important;
+  transform: translateX(5px);
 }
 #movement .con2_main_lists .dev_lang_lists .reactjs {
   width: 68px !important;
@@ -609,4 +604,133 @@ canvas {
 }
 #movement .con2_main_lists .dev_lang_lists > li:not(:first-child) img {
   width: 60px;
+}
+#movement .con3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: var(--contentBox);
+  height: 100vh;
+}
+#movement .con3 .con3_heading {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 50px;
+  display: flex;
+  margin-bottom: 150px;
+}
+#movement .con3 .con3_heading .upperline {
+  display: block;
+  width: 13.5px;
+  height: 3px;
+  background: white;
+  transform: translateY(10px);
+}
+#movement .con3 .con3_heading .colored_heading {
+  font-size: 40px;
+  vertical-align: top;
+  /* color: var(--theme5-2); */
+}
+#movement .con3 .con3_lists {
+  height: 500px;
+  opacity: 1;
+  transform: translateX(-20px);
+  width: var(--contentBox);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 0 150px;
+  transition: all 0.3s ease-in-out;
+}
+#movement .con3 .con3_lists.active {
+  opacity: 1;
+  transform: translateX(0px);
+  display: flex;
+  z-index: 10;
+}
+#movement .con3 .con3_lists > li {
+  width: 380px;
+  align-items: center;
+  position: relative;
+}
+#movement .con3 .con3_lists > li::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 6px;
+  background: var(--theme2-3);
+  position: absolute;
+  top: 80px;
+  left: -25px;
+}
+#movement .con3 .con3_lists > li::after {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 6px;
+  background: var(--theme2-3);
+  position: absolute;
+  top: 80px;
+  right: -25px;
+}
+#movement .con3 .con3_lists > li h3 {
+  font-size: 40px;
+  margin-bottom: 0px;
+  letter-spacing: 1px;
+}
+#movement .con3 .con3_lists > li .date {
+  font-size: 16px;
+}
+#movement .con3 .con3_lists > li h4 {
+  font-weight: normal;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  margin: 14px 0 12px;
+}
+#movement .con3 .con3_lists > li img {
+  width: 150px;
+  filter: var(--white);
+}
+#movement .con3 .con3_lists > li .con3_description {
+  font-size: 17px;
+  font-weight: light;
+  position: relative;
+}
+#movement .con3 .con3_lists > li .con3_description::before {
+  content: url("../img/triangle.svg");
+  transform: rotate(180deg);
+  filter: var(--white);
+  width: 12px;
+  position: absolute;
+  top: 2px;
+  left: -20px;
+}
+#movement .con3 .con3_lists > li .stack {
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 30px 0 15px;
+}
+#movement .con3 .con3_lists > li ul li {
+  display: inline;
+  font-size: 17px;
+  font-weight: lighter;
+  padding: 3px 8px;
+  border: 2px solid var(--theme1-1);
+  border-radius: 10px;
+}
+#movement .con3 .con3_lists > li:not(:first-child) .img_wrap {
+  width: 165px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#movement .con3 .con3_lists > li:not(:first-child) img {
+  width: 80px;
+}
+#movement .con3 .con3_lists > li:not(:first-child) h2 {
+  font-size: 50px;
+  text-align: center;
+  margin: 60px 0 0 0;
 }
