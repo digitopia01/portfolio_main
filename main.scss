@@ -105,23 +105,27 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
   .second_Page {
     position: relative;
     top: 0px;
-    height: 400vh;
+    height: 470vh;
     z-index: 0;
-    img {
+    .shape {
       width: 700px;
       height: 700px;
       position: sticky;
       z-index: 15;
+      /* ------ SHAPE 1 ------ */
       &.shape1 {
-        top: -10%;
+        top: 0;
         /* original position */
         transform: translate(-50px, -160px);
+
+        transform: translate(1850px, 800px) scale(1, 0.8) rotate(200deg);
         &.secondposition {
           /* second page position */
-          transform: translate(300px, -30px) scale(0.4, 0.2) rotate(240deg);
+          transform: translate(400px, -50px) scale(0.4, 0.2) rotate(240deg);
         }
         &.thirdposition {
           /* third page position */
+          transform: translate(1850px, 800px) scale(1, 0.8) rotate(200deg);
         }
         &.fourthposition {
           /* fourth page position */
@@ -131,16 +135,20 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
           transform: translate(640px, 650px) scale(0.2) rotate(40deg);
         }
       }
+      /* ------ SHAPE 2 ------ */
       &.shape2 {
-        top: -10%;
+        top: 0;
         /* original position */
         transform: translate(700px, -160px);
+
+        transform: translate(-1000px, 800px) rotate(180deg) scale(0.8);
         &.secondposition {
           /* second page position */
-          transform: translate(900px, 900px);
+          transform: translate(1150px, 900px);
         }
         &.thirdposition {
           /* third page position */
+          transform: translate(-1000px, 800px) rotate(180deg) scale(0.8);
         }
         &.fourthposition {
           /* fourth page position */
@@ -150,18 +158,22 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
           transform: translate(300px, 800px) scale(0.2) rotate(80deg);
         }
       }
+      /* ------ SHAPE 3 ------ */
       &.shape3 {
         width: 1100px;
         height: 1100px;
-        top: 60%;
+        top: 0;
         /* original position */
-        transform: translate(500px, -200px);
+        // transform: translate(500px, -200px);
+
+        // transform: translate(200px, -980px) rotate(180deg) scale(0.3);
         &.secondposition {
           /* second page position */
-          transform: translate(-700px, -200px) rotate(180deg);
+          transform: translate(-800px, -200px) rotate(180deg);
         }
         &.thirdposition {
           /* third page position */
+          transform: translate(200px, -980px) rotate(180deg) scale(0.3);
         }
         &.fourthposition {
           /* fourth page position */
@@ -372,6 +384,7 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
         border-radius: 38.5px;
         border: none;
         font-size: 16px;
+        cursor: pointer;
       }
       .yel_text {
         color: $theme2-1;
@@ -696,13 +709,13 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
         display: block;
         width: 13.5px;
         height: 3px;
-        background: white;
+        background: $blackText;
         transform: translateY(10px);
       }
       .colored_heading {
         font-size: 40px;
         vertical-align: top;
-        /* color: $theme5-2; */
+        color: $blackText;
       }
     }
     .con3_lists {
@@ -822,18 +835,18 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
       font-weight: 900;
       line-height: 50px;
       display: flex;
-      margin-bottom: 150px;
+      margin: 200px 0 150px;
       .upperline {
         display: block;
         width: 13.5px;
         height: 3px;
-        background: white;
+        background: $blackText;
         transform: translateY(10px);
       }
       .colored_heading {
         font-size: 40px;
         vertical-align: top;
-        /* color: $theme5-2; */
+        color: $blackText;
       }
     }
     .con4_lists {

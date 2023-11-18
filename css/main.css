@@ -79,71 +79,78 @@ canvas {
 #fixed .second_Page {
   position: relative;
   top: 0px;
-  height: 400vh;
+  height: 470vh;
   z-index: 0;
 }
-#fixed .second_Page img {
+#fixed .second_Page .shape {
   width: 700px;
   height: 700px;
   position: sticky;
   z-index: 15;
+  /* ------ SHAPE 1 ------ */
+  /* ------ SHAPE 2 ------ */
+  /* ------ SHAPE 3 ------ */
 }
-#fixed .second_Page img.shape1 {
-  top: -10%;
+#fixed .second_Page .shape.shape1 {
+  top: 0;
   /* original position */
   transform: translate(-50px, -160px);
+  transform: translate(1850px, 800px) scale(1, 0.8) rotate(200deg);
 }
-#fixed .second_Page img.shape1.secondposition {
+#fixed .second_Page .shape.shape1.secondposition {
   /* second page position */
-  transform: translate(300px, -30px) scale(0.4, 0.2) rotate(240deg);
+  transform: translate(400px, -50px) scale(0.4, 0.2) rotate(240deg);
 }
-#fixed .second_Page img.shape1.thirdposition {
+#fixed .second_Page .shape.shape1.thirdposition {
   /* third page position */
+  transform: translate(1850px, 800px) scale(1, 0.8) rotate(200deg);
 }
-#fixed .second_Page img.shape1.fourthposition {
+#fixed .second_Page .shape.shape1.fourthposition {
   /* fourth page position */
 }
-#fixed .second_Page img.shape1.footerposition {
+#fixed .second_Page .shape.shape1.footerposition {
   /* footer position */
   transform: translate(640px, 650px) scale(0.2) rotate(40deg);
 }
-#fixed .second_Page img.shape2 {
-  top: -10%;
+#fixed .second_Page .shape.shape2 {
+  top: 0;
   /* original position */
   transform: translate(700px, -160px);
+  transform: translate(-1000px, 800px) rotate(180deg) scale(0.8);
 }
-#fixed .second_Page img.shape2.secondposition {
+#fixed .second_Page .shape.shape2.secondposition {
   /* second page position */
-  transform: translate(900px, 900px);
+  transform: translate(1150px, 900px);
 }
-#fixed .second_Page img.shape2.thirdposition {
+#fixed .second_Page .shape.shape2.thirdposition {
   /* third page position */
+  transform: translate(-1000px, 800px) rotate(180deg) scale(0.8);
 }
-#fixed .second_Page img.shape2.fourthposition {
+#fixed .second_Page .shape.shape2.fourthposition {
   /* fourth page position */
 }
-#fixed .second_Page img.shape2.footerposition {
+#fixed .second_Page .shape.shape2.footerposition {
   /* footer position */
   transform: translate(300px, 800px) scale(0.2) rotate(80deg);
 }
-#fixed .second_Page img.shape3 {
+#fixed .second_Page .shape.shape3 {
   width: 1100px;
   height: 1100px;
-  top: 60%;
+  top: 0;
   /* original position */
-  transform: translate(500px, -200px);
 }
-#fixed .second_Page img.shape3.secondposition {
+#fixed .second_Page .shape.shape3.secondposition {
   /* second page position */
-  transform: translate(-700px, -200px) rotate(180deg);
+  transform: translate(-800px, -200px) rotate(180deg);
 }
-#fixed .second_Page img.shape3.thirdposition {
+#fixed .second_Page .shape.shape3.thirdposition {
   /* third page position */
+  transform: translate(200px, -980px) rotate(180deg) scale(0.3);
 }
-#fixed .second_Page img.shape3.fourthposition {
+#fixed .second_Page .shape.shape3.fourthposition {
   /* fourth page position */
 }
-#fixed .second_Page img.shape3.footerposition {
+#fixed .second_Page .shape.shape3.footerposition {
   /* footer position */
   transform: translate(100px, 1000px) scale(0.22) rotate(20deg);
 }
@@ -334,6 +341,7 @@ canvas {
   border-radius: 38.5px;
   border: none;
   font-size: 16px;
+  cursor: pointer;
 }
 #movement .con1 .con1_text .yel_text {
   color: #ffce32;
@@ -651,13 +659,13 @@ canvas {
   display: block;
   width: 13.5px;
   height: 3px;
-  background: white;
+  background: #000000;
   transform: translateY(10px);
 }
 #movement .con3 .con3_heading .colored_heading {
   font-size: 40px;
   vertical-align: top;
-  /* color: $theme5-2; */
+  color: #000000;
 }
 #movement .con3 .con3_lists {
   height: 500px;
@@ -772,19 +780,19 @@ canvas {
   font-weight: 900;
   line-height: 50px;
   display: flex;
-  margin-bottom: 150px;
+  margin: 200px 0 150px;
 }
 #movement .con4 .con4_heading .upperline {
   display: block;
   width: 13.5px;
   height: 3px;
-  background: white;
+  background: #000000;
   transform: translateY(10px);
 }
 #movement .con4 .con4_heading .colored_heading {
   font-size: 40px;
   vertical-align: top;
-  /* color: $theme5-2; */
+  color: #000000;
 }
 #movement .con4 .con4_lists {
   display: flex;
