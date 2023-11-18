@@ -29,6 +29,10 @@ canvas {
   width: 100%;
   border-radius: 0 0 200px 200px;
 }
+/* 기본 텍스트 색상 */
+$blackText: #000000;
+$whiteText: #ffffff;
+
 /* 테마 컬러 설정 */
 $theme1-1: #f8f8f8;
 $theme1-2: #5f7a75;
@@ -69,8 +73,7 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
   top: 0%;
   left: 0%;
   width: 100%;
-  height: 260vh;
-  overflow: hidden;
+  /*  height: 260vh; */
   z-index: 10;
   /* header navigator */
   .first_Page {
@@ -82,6 +85,11 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
       transform: translateY(-50%);
       z-index: 30;
       gap: 60px;
+      h1 {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
       .svg {
         width: 50px;
         height: 50px;
@@ -96,27 +104,72 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
   }
   .second_Page {
     position: relative;
-    height: 100vh;
+    top: 0px;
+    height: 400vh;
     z-index: 0;
     img {
       width: 700px;
       height: 700px;
-      position: absolute;
+      position: sticky;
       z-index: 15;
       &.shape1 {
         top: -10%;
-        left: -5%;
+        /* original position */
+        transform: translate(-50px, -160px);
+        &.secondposition {
+          /* second page position */
+          transform: translate(300px, -30px) scale(0.4, 0.2) rotate(240deg);
+        }
+        &.thirdposition {
+          /* third page position */
+        }
+        &.fourthposition {
+          /* fourth page position */
+        }
+        &.footerposition {
+          /* footer position */
+          transform: translate(640px, 650px) scale(0.2) rotate(40deg);
+        }
       }
       &.shape2 {
         top: -10%;
-        right: -5%;
+        /* original position */
+        transform: translate(700px, -160px);
+        &.secondposition {
+          /* second page position */
+          transform: translate(900px, 900px);
+        }
+        &.thirdposition {
+          /* third page position */
+        }
+        &.fourthposition {
+          /* fourth page position */
+        }
+        &.footerposition {
+          /* footer position */
+          transform: translate(300px, 800px) scale(0.2) rotate(80deg);
+        }
       }
       &.shape3 {
         width: 1100px;
         height: 1100px;
-        bottom: -40%;
-        left: 50%;
-        transform: translate(-50%);
+        top: 60%;
+        /* original position */
+        transform: translate(500px, -200px);
+        &.secondposition {
+          /* second page position */
+          transform: translate(-700px, -200px) rotate(180deg);
+        }
+        &.thirdposition {
+          /* third page position */
+        }
+        &.fourthposition {
+          /* fourth page position */
+        }
+        &.footerposition {
+          /* footer position */
+          transform: translate(100px, 1000px) scale(0.22) rotate(20deg);
+        }
       }
     }
   }
@@ -341,13 +394,13 @@ $yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
         display: block;
         width: 13.5px;
         height: 3px;
-        background: white;
+        background: $blackText;
         transform: translateY(10px);
       }
       .colored_heading {
         font-size: 40px;
         vertical-align: top;
-        /* color: $theme5-2; */
+        color: $blackText;
       }
     }
     img {

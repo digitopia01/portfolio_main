@@ -35,6 +35,7 @@ canvas {
   border-radius: 0 0 200px 200px;
 }
 
+/* 기본 텍스트 색상 */
 /* 테마 컬러 설정 */
 /* 콘텐트 박스 크기 */
 /* svg 컬러 리스트 */
@@ -45,8 +46,7 @@ canvas {
   top: 0%;
   left: 0%;
   width: 100%;
-  height: 260vh;
-  overflow: hidden;
+  /*  height: 260vh; */
   z-index: 10;
   /* header navigator */
 }
@@ -61,11 +61,15 @@ canvas {
   z-index: 30;
   gap: 60px;
 }
+#fixed .first_Page header h1 {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 #fixed .first_Page header .svg {
   width: 50px;
   height: 50px;
-  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
 }
 #fixed .first_Page header .navigator {
   flex-direction: column;
@@ -74,29 +78,74 @@ canvas {
 }
 #fixed .second_Page {
   position: relative;
-  height: 100vh;
+  top: 0px;
+  height: 400vh;
   z-index: 0;
 }
 #fixed .second_Page img {
   width: 700px;
   height: 700px;
-  position: absolute;
+  position: sticky;
   z-index: 15;
 }
 #fixed .second_Page img.shape1 {
   top: -10%;
-  left: -5%;
+  /* original position */
+  transform: translate(-50px, -160px);
+}
+#fixed .second_Page img.shape1.secondposition {
+  /* second page position */
+  transform: translate(300px, -30px) scale(0.4, 0.2) rotate(240deg);
+}
+#fixed .second_Page img.shape1.thirdposition {
+  /* third page position */
+}
+#fixed .second_Page img.shape1.fourthposition {
+  /* fourth page position */
+}
+#fixed .second_Page img.shape1.footerposition {
+  /* footer position */
+  transform: translate(640px, 650px) scale(0.2) rotate(40deg);
 }
 #fixed .second_Page img.shape2 {
   top: -10%;
-  right: -5%;
+  /* original position */
+  transform: translate(700px, -160px);
+}
+#fixed .second_Page img.shape2.secondposition {
+  /* second page position */
+  transform: translate(900px, 900px);
+}
+#fixed .second_Page img.shape2.thirdposition {
+  /* third page position */
+}
+#fixed .second_Page img.shape2.fourthposition {
+  /* fourth page position */
+}
+#fixed .second_Page img.shape2.footerposition {
+  /* footer position */
+  transform: translate(300px, 800px) scale(0.2) rotate(80deg);
 }
 #fixed .second_Page img.shape3 {
   width: 1100px;
   height: 1100px;
-  bottom: -40%;
-  left: 50%;
-  transform: translate(-50%);
+  top: 60%;
+  /* original position */
+  transform: translate(500px, -200px);
+}
+#fixed .second_Page img.shape3.secondposition {
+  /* second page position */
+  transform: translate(-700px, -200px) rotate(180deg);
+}
+#fixed .second_Page img.shape3.thirdposition {
+  /* third page position */
+}
+#fixed .second_Page img.shape3.fourthposition {
+  /* fourth page position */
+}
+#fixed .second_Page img.shape3.footerposition {
+  /* footer position */
+  transform: translate(100px, 1000px) scale(0.22) rotate(20deg);
 }
 
 /* 움직일 두번째 섹션. */
@@ -207,8 +256,7 @@ canvas {
 #movement .visual .visual_elements .colorThemes .theme:nth-child(3) .third {
   background: #ffffff;
 }
-#movement .visual .visual_elements .colorThemes .theme:nth-child(4) span,
-#movement .visual .visual_elements .colorThemes .theme:last-child span {
+#movement .visual .visual_elements .colorThemes .theme:nth-child(4) span, #movement .visual .visual_elements .colorThemes .theme:last-child span {
   top: 50% !important;
   transform: translateY(-50%);
 }
@@ -237,8 +285,7 @@ canvas {
 }
 #movement .con1 .con1_pic {
   width: 550px;
-  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
 }
 #movement .con1 .con1_text {
   width: 30%;
@@ -309,17 +356,16 @@ canvas {
   display: block;
   width: 13.5px;
   height: 3px;
-  background: white;
+  background: #000000;
   transform: translateY(10px);
 }
 #movement .con2 .con2_heading .colored_heading {
   font-size: 40px;
   vertical-align: top;
-  /* color: $theme5-2; */
+  color: #000000;
 }
 #movement .con2 img {
-  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
 }
 #movement .con2 .con2_sub_heading {
   display: flex;
@@ -358,8 +404,7 @@ canvas {
 #movement .con2 .con2_sub_heading .toleft {
   width: 32px;
   height: 32px;
-  filter: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
-    brightness(98%) contrast(106%);
+  filter: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg) brightness(98%) contrast(106%);
 }
 #movement .con2 .con2_sub_heading .toright {
   margin-left: 30px;
@@ -457,8 +502,7 @@ canvas {
 #movement .con2_main_lists .design_lists > li .list_description li::before {
   content: url("../img/triangle.svg");
   transform: rotate(180deg);
-  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
   width: 13px;
   position: absolute;
   top: 2px;
@@ -569,8 +613,7 @@ canvas {
 #movement .con2_main_lists .dev_lang_lists > li .list_description li::before {
   content: url("../img/triangle.svg");
   transform: rotate(180deg);
-  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
   width: 13px;
   position: absolute;
   top: 2px;
@@ -674,8 +717,7 @@ canvas {
 }
 #movement .con3 .con3_lists > li img {
   width: 150px;
-  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
 }
 #movement .con3 .con3_lists > li .con3_description {
   font-size: 17px;
@@ -685,8 +727,7 @@ canvas {
 #movement .con3 .con3_lists > li .con3_description::before {
   content: url("../img/triangle.svg");
   transform: rotate(180deg);
-  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
   width: 12px;
   position: absolute;
   top: 2px;
