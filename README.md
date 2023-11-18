@@ -60,3 +60,6 @@
 - SCSS 변수 지정 사용 및 HTML, CSS W3C Validator 로 검사 후 최적화
 - Footer 에 `<heading>` 태그를 사용하였던 부분 일반적이지 않으므로 수정하여 `<div>, <p>` 태그로 수정
 - header 에 `<h1>` 태그를 사용하는 것이 웹표준 및 웹접근성에 맞으므로 수정하여 내용은 넣었으나 가시적으로는 노출이 없어야하므로 넓이/높이 값을 `0`으로 주고 overflow:hidden으로 가리는 것으로 수정
+- `shapes` 요소들을 `position:sticky`로 화면에 고정 시킨 후 `scroll` 위치에 따른 `transform`으로 위치 및 모양 변경값 설정
+
+<img src="img/forreadme8.png">
