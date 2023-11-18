@@ -64,3 +64,7 @@
 - `pavicon` 삽입
 
 <img src="img/forreadme8.png">
+
+#### 추가 작업
+
+- `position:sticky` 로 요소 일부분을 화면 밖으로 삐져나가게 하려고 했으나 동작하지 않으므로 결국 `top:0;` 속성값만 부여하고 `transform`속성으로 짜기로 결정
