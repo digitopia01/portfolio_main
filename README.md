@@ -54,3 +54,7 @@
 <img src="img/forreadme5.png">
 <img src="img/forreadme6.png">
 <img src="img/forreadme7.png">
+
+#### 2023-11-18
+
+- SCSS 변수 지정 사용 및 HTML, CSS W3C Validator 로 검사 후 최적화
