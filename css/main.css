@@ -23,7 +23,7 @@ body {
 }
 
 #visible {
-  /* height: 260vh; --나중에 활성화해놓을 것 */
+  /* height: 260vh; $나중에 활성화해놓을 것 */
   overflow: hidden;
 }
 
@@ -35,35 +35,9 @@ canvas {
   border-radius: 0 0 200px 200px;
 }
 
-:root {
-  /* 테마 컬러 설정 */
-  --theme1-1: #f8f8f8;
-  --theme1-2: #5f7a75;
-  --theme1-3: #d2b6a0;
-  --theme1-4: #a0a07d;
-  --theme1-5: #333333;
-  --theme2-1: #ffce32;
-  --theme2-2: #1d63ff;
-  --theme2-3: #fe3a4a;
-  --theme3-1: #e9f1fa;
-  --theme3-2: #00abe4;
-  --theme3-3: #ffffff;
-  --theme4-1: #ffffff;
-  --theme4-2: #000000;
-  --theme5-1: #ffb400;
-  --theme5-2: #000000;
-  /* 콘텐트 박스 크기 */
-  --contentBox: 1480px;
-  --innerContentBox: 1200px;
-  /* svg 컬러 리스트 */
-  --white: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
-  --black: invert(0%) sepia(87%) saturate(7465%) hue-rotate(191deg)
-    brightness(97%) contrast(95%);
-  --yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
-    brightness(98%) contrast(106%);
-}
-
+/* 테마 컬러 설정 */
+/* 콘텐트 박스 크기 */
+/* svg 컬러 리스트 */
 /* 고정된 첫번째 섹션 */
 #fixed {
   background: black;
@@ -90,7 +64,8 @@ canvas {
 #fixed .first_Page header .svg {
   width: 50px;
   height: 50px;
-  filter: var(--white);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+    brightness(118%) contrast(116%);
 }
 #fixed .first_Page header .navigator {
   flex-direction: column;
@@ -166,6 +141,9 @@ canvas {
   height: 150px;
   position: relative;
 }
+#movement .visual .visual_elements .colorThemes .theme:hover {
+  transform: translateY(-30px);
+}
 #movement .visual .visual_elements .colorThemes .theme h2 {
   color: white;
   position: absolute;
@@ -180,19 +158,19 @@ canvas {
   cursor: pointer;
 }
 #movement .visual .visual_elements .colorThemes .theme span.first {
-  background: var(--theme1-1);
+  background: #f8f8f8;
   left: 0%;
   top: 5%;
   z-index: 0;
 }
 #movement .visual .visual_elements .colorThemes .theme span.second {
-  background: var(--theme1-2);
+  background: #5f7a75;
   right: 0%;
   top: 5%;
   z-index: 5;
 }
 #movement .visual .visual_elements .colorThemes .theme span.third {
-  background: var(--theme1-3);
+  background: #d2b6a0;
   left: 50%;
   bottom: 5%;
   transform: translate(-50%);
@@ -202,50 +180,51 @@ canvas {
   bottom: 22%;
 }
 #movement .visual .visual_elements .colorThemes .theme:first-child .fourth {
-  background: var(--theme1-4);
+  background: #a0a07d;
   left: 0%;
   bottom: 0%;
 }
 #movement .visual .visual_elements .colorThemes .theme:first-child .fifth {
-  background: var(--theme1-5);
+  background: #333333;
   right: 0%;
   bottom: 0%;
 }
 #movement .visual .visual_elements .colorThemes .theme:nth-child(2) .first {
-  background: var(--theme2-1);
+  background: #ffce32;
 }
 #movement .visual .visual_elements .colorThemes .theme:nth-child(2) .second {
-  background: var(--theme2-2);
+  background: #1d63ff;
 }
 #movement .visual .visual_elements .colorThemes .theme:nth-child(2) .third {
-  background: var(--theme2-3);
+  background: #fe3a4a;
 }
 #movement .visual .visual_elements .colorThemes .theme:nth-child(3) .first {
-  background: var(--theme3-1);
+  background: #e9f1fa;
 }
 #movement .visual .visual_elements .colorThemes .theme:nth-child(3) .second {
-  background: var(--theme3-2);
+  background: #00abe4;
 }
 #movement .visual .visual_elements .colorThemes .theme:nth-child(3) .third {
-  background: var(--theme3-3);
+  background: #ffffff;
 }
-#movement .visual .visual_elements .colorThemes .theme:nth-child(4) span, #movement .visual .visual_elements .colorThemes .theme:last-child span {
+#movement .visual .visual_elements .colorThemes .theme:nth-child(4) span,
+#movement .visual .visual_elements .colorThemes .theme:last-child span {
   top: 50% !important;
   transform: translateY(-50%);
 }
 #movement .visual .visual_elements .colorThemes .theme:nth-child(4) .first {
-  background: var(--theme4-2);
-  border: 3px solid var(--theme4-1);
+  background: #000000;
+  border: 3px solid #ffffff;
 }
 #movement .visual .visual_elements .colorThemes .theme:nth-child(4) .second {
-  background: var(--theme4-1);
+  background: #ffffff;
 }
 #movement .visual .visual_elements .colorThemes .theme:last-child .first {
-  background: var(--theme4-2);
-  border: 3px solid var(--theme4-1);
+  background: #000000;
+  border: 3px solid #ffffff;
 }
 #movement .visual .visual_elements .colorThemes .theme:last-child .second {
-  background: var(--theme5-1);
+  background: #ffb400;
 }
 #movement .con1 {
   margin: 0 auto;
@@ -258,7 +237,8 @@ canvas {
 }
 #movement .con1 .con1_pic {
   width: 550px;
-  filter: var(--white);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+    brightness(118%) contrast(116%);
 }
 #movement .con1 .con1_text {
   width: 30%;
@@ -266,7 +246,7 @@ canvas {
 #movement .con1 .con1_text .discover {
   font-size: 40px;
   margin-bottom: 0px;
-  color: var(--theme2-2);
+  color: #1d63ff;
 }
 #movement .con1 .con1_text .con1_heading {
   font-size: 60px;
@@ -276,7 +256,7 @@ canvas {
   display: block;
   width: 152px;
   height: 10px;
-  background: var(--theme2-2);
+  background: #1d63ff;
 }
 #movement .con1 .con1_text p {
   font-size: 21px;
@@ -301,7 +281,7 @@ canvas {
 }
 #movement .con1 .con1_text button {
   color: white;
-  background: var(--theme2-3);
+  background: #fe3a4a;
   width: 193px;
   height: 54px;
   border-radius: 38.5px;
@@ -309,14 +289,14 @@ canvas {
   font-size: 16px;
 }
 #movement .con1 .con1_text .yel_text {
-  color: var(--theme2-1);
+  color: #ffce32;
 }
 #movement .con2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: var(--contentBox);
+  width: 1480px;
   height: 100vh;
 }
 #movement .con2 .con2_heading {
@@ -335,10 +315,11 @@ canvas {
 #movement .con2 .con2_heading .colored_heading {
   font-size: 40px;
   vertical-align: top;
-  /* color: var(--theme5-2); */
+  /* color: $theme5-2; */
 }
 #movement .con2 img {
-  filter: var(--white);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+    brightness(118%) contrast(116%);
 }
 #movement .con2 .con2_sub_heading {
   display: flex;
@@ -377,7 +358,8 @@ canvas {
 #movement .con2 .con2_sub_heading .toleft {
   width: 32px;
   height: 32px;
-  filter: var(--yellow);
+  filter: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
+    brightness(98%) contrast(106%);
 }
 #movement .con2 .con2_sub_heading .toright {
   margin-left: 30px;
@@ -392,7 +374,7 @@ canvas {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--theme2-1);
+  background: #ffce32;
   transform: translateY(-10px);
 }
 #movement .con2 .con2_sub_heading .dev {
@@ -405,7 +387,7 @@ canvas {
   width: 520px;
   font-weight: 900;
   font-size: 45px;
-  opacity: 10%;
+  opacity: 0.1;
   position: absolute;
   left: -20px;
   top: -10px;
@@ -420,7 +402,7 @@ canvas {
   width: 520px;
   font-weight: 900;
   font-size: 45px;
-  opacity: 10%;
+  opacity: 0.1;
   position: absolute;
   left: -20px;
   top: -10px;
@@ -433,7 +415,7 @@ canvas {
   opacity: 0;
   transform: translateX(-20px);
   z-index: -1;
-  width: var(--contentBox);
+  width: 1480px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -449,7 +431,7 @@ canvas {
   display: block;
   width: 24px;
   height: 6px;
-  background: var(--theme2-1);
+  background: #ffce32;
   position: absolute;
   top: 30px;
   left: -42px;
@@ -475,7 +457,8 @@ canvas {
 #movement .con2_main_lists .design_lists > li .list_description li::before {
   content: url("../img/triangle.svg");
   transform: rotate(180deg);
-  filter: var(--white);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+    brightness(118%) contrast(116%);
   width: 13px;
   position: absolute;
   top: 2px;
@@ -486,7 +469,7 @@ canvas {
   display: block;
   width: 178px;
   height: 6px;
-  background: var(--theme2-1);
+  background: #ffce32;
   position: absolute;
   top: 30px;
   right: 0;
@@ -515,13 +498,13 @@ canvas {
   display: block;
   width: 178px;
   height: 6px;
-  background: var(--theme2-1);
+  background: #ffce32;
   position: absolute;
   top: 30px;
   right: 0;
 }
 #movement .con2_main_lists .dev_lang_lists {
-  width: var(--contentBox);
+  width: 1480px;
   justify-content: space-between;
   position: absolute;
   transition: all 0.3s ease-in-out;
@@ -550,7 +533,7 @@ canvas {
   display: block;
   width: 24px;
   height: 6px;
-  background: var(--theme2-1);
+  background: #ffce32;
   position: absolute;
   top: 30px;
   left: -42px;
@@ -560,7 +543,7 @@ canvas {
   display: block;
   width: 136px;
   height: 6px;
-  background: var(--theme2-1);
+  background: #ffce32;
   position: absolute;
   top: 30px;
   right: 0;
@@ -586,7 +569,8 @@ canvas {
 #movement .con2_main_lists .dev_lang_lists > li .list_description li::before {
   content: url("../img/triangle.svg");
   transform: rotate(180deg);
-  filter: var(--white);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+    brightness(118%) contrast(116%);
   width: 13px;
   position: absolute;
   top: 2px;
@@ -597,7 +581,7 @@ canvas {
   display: block;
   width: 178px;
   height: 6px;
-  background: var(--theme2-1);
+  background: #ffce32;
   position: absolute;
   top: 30px;
   right: 0;
@@ -610,7 +594,7 @@ canvas {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: var(--contentBox);
+  width: 1480px;
   height: 100vh;
 }
 #movement .con3 .con3_heading {
@@ -630,13 +614,13 @@ canvas {
 #movement .con3 .con3_heading .colored_heading {
   font-size: 40px;
   vertical-align: top;
-  /* color: var(--theme5-2); */
+  /* color: $theme5-2; */
 }
 #movement .con3 .con3_lists {
   height: 500px;
   opacity: 1;
   transform: translateX(-20px);
-  width: var(--contentBox);
+  width: 1480px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -659,7 +643,7 @@ canvas {
   display: block;
   width: 35px;
   height: 6px;
-  background: var(--theme2-3);
+  background: #fe3a4a;
   position: absolute;
   top: 80px;
   left: -25px;
@@ -669,7 +653,7 @@ canvas {
   display: block;
   width: 250px;
   height: 6px;
-  background: var(--theme2-3);
+  background: #fe3a4a;
   position: absolute;
   top: 80px;
   right: -25px;
@@ -690,17 +674,19 @@ canvas {
 }
 #movement .con3 .con3_lists > li img {
   width: 150px;
-  filter: var(--white);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+    brightness(118%) contrast(116%);
 }
 #movement .con3 .con3_lists > li .con3_description {
   font-size: 17px;
-  font-weight: light;
+  font-weight: 300;
   position: relative;
 }
 #movement .con3 .con3_lists > li .con3_description::before {
   content: url("../img/triangle.svg");
   transform: rotate(180deg);
-  filter: var(--white);
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+    brightness(118%) contrast(116%);
   width: 12px;
   position: absolute;
   top: 2px;
@@ -714,9 +700,9 @@ canvas {
 #movement .con3 .con3_lists > li ul li {
   display: inline;
   font-size: 17px;
-  font-weight: lighter;
+  font-weight: 100;
   padding: 3px 8px;
-  border: 2px solid var(--theme1-1);
+  border: 2px solid #f8f8f8;
   border-radius: 10px;
 }
 #movement .con3 .con3_lists > li:not(:first-child) .img_wrap {
@@ -738,7 +724,7 @@ canvas {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: var(--contentBox);
+  width: 1480px;
 }
 #movement .con4 .con4_heading {
   font-size: 60px;
@@ -757,7 +743,7 @@ canvas {
 #movement .con4 .con4_heading .colored_heading {
   font-size: 40px;
   vertical-align: top;
-  /* color: var(--theme5-2); */
+  /* color: $theme5-2; */
 }
 #movement .con4 .con4_lists {
   display: flex;
@@ -809,13 +795,13 @@ canvas {
   justify-content: center;
   text-align: center;
 }
-#movement footer h2 {
+#movement footer div {
   font-size: 25px;
-  font-weight: light;
+  font-weight: 300;
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
-#movement footer h4 {
+#movement footer p {
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 300;
 }

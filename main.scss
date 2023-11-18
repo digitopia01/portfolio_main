@@ -18,7 +18,7 @@ body {
   background: black;
 }
 #visible {
-  /* height: 260vh; --나중에 활성화해놓을 것 */
+  /* height: 260vh; $나중에 활성화해놓을 것 */
   overflow: hidden;
 }
 
@@ -29,40 +29,38 @@ canvas {
   width: 100%;
   border-radius: 0 0 200px 200px;
 }
-:root {
-  /* 테마 컬러 설정 */
-  --theme1-1: #f8f8f8;
-  --theme1-2: #5f7a75;
-  --theme1-3: #d2b6a0;
-  --theme1-4: #a0a07d;
-  --theme1-5: #333333;
+/* 테마 컬러 설정 */
+$theme1-1: #f8f8f8;
+$theme1-2: #5f7a75;
+$theme1-3: #d2b6a0;
+$theme1-4: #a0a07d;
+$theme1-5: #333333;
 
-  --theme2-1: #ffce32;
-  --theme2-2: #1d63ff;
-  --theme2-3: #fe3a4a;
+$theme2-1: #ffce32;
+$theme2-2: #1d63ff;
+$theme2-3: #fe3a4a;
 
-  --theme3-1: #e9f1fa;
-  --theme3-2: #00abe4;
-  --theme3-3: #ffffff;
+$theme3-1: #e9f1fa;
+$theme3-2: #00abe4;
+$theme3-3: #ffffff;
 
-  --theme4-1: #ffffff;
-  --theme4-2: #000000;
+$theme4-1: #ffffff;
+$theme4-2: #000000;
 
-  --theme5-1: #ffb400;
-  --theme5-2: #000000;
+$theme5-1: #ffb400;
+$theme5-2: #000000;
 
-  /* 콘텐트 박스 크기 */
-  --contentBox: 1480px;
-  --innerContentBox: 1200px;
+/* 콘텐트 박스 크기 */
+$contentBox: 1480px;
+$innerContentBox: 1200px;
 
-  /* svg 컬러 리스트 */
-  --white: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
-    brightness(118%) contrast(116%);
-  --black: invert(0%) sepia(87%) saturate(7465%) hue-rotate(191deg)
-    brightness(97%) contrast(95%);
-  --yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
-    brightness(98%) contrast(106%);
-}
+/* svg 컬러 리스트 */
+$white: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg)
+  brightness(118%) contrast(116%);
+$black: invert(0%) sepia(87%) saturate(7465%) hue-rotate(191deg) brightness(97%)
+  contrast(95%);
+$yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
+  brightness(98%) contrast(106%);
 
 /* 고정된 첫번째 섹션 */
 #fixed {
@@ -87,7 +85,7 @@ canvas {
       .svg {
         width: 50px;
         height: 50px;
-        filter: var(--white);
+        filter: $white;
       }
       .navigator {
         flex-direction: column;
@@ -162,6 +160,9 @@ canvas {
           width: 150px;
           height: 150px;
           position: relative;
+          &:hover {
+            transform: translateY(-30px);
+          }
           h2 {
             color: white;
             position: absolute;
@@ -175,19 +176,19 @@ canvas {
             border-radius: 50%;
             cursor: pointer;
             &.first {
-              background: var(--theme1-1);
+              background: $theme1-1;
               left: 0%;
               top: 5%;
               z-index: 0;
             }
             &.second {
-              background: var(--theme1-2);
+              background: $theme1-2;
               right: 0%;
               top: 5%;
               z-index: 5;
             }
             &.third {
-              background: var(--theme1-3);
+              background: $theme1-3;
               left: 50%;
               bottom: 5%;
               transform: translate(-50%);
@@ -199,36 +200,36 @@ canvas {
               bottom: 22%;
             }
             .fourth {
-              background: var(--theme1-4);
+              background: $theme1-4;
               left: 0%;
               bottom: 0%;
             }
             .fifth {
-              background: var(--theme1-5);
+              background: $theme1-5;
               right: 0%;
               bottom: 0%;
             }
           }
           &:nth-child(2) {
             .first {
-              background: var(--theme2-1);
+              background: $theme2-1;
             }
             .second {
-              background: var(--theme2-2);
+              background: $theme2-2;
             }
             .third {
-              background: var(--theme2-3);
+              background: $theme2-3;
             }
           }
           &:nth-child(3) {
             .first {
-              background: var(--theme3-1);
+              background: $theme3-1;
             }
             .second {
-              background: var(--theme3-2);
+              background: $theme3-2;
             }
             .third {
-              background: var(--theme3-3);
+              background: $theme3-3;
             }
           }
           &:nth-child(4),
@@ -240,20 +241,20 @@ canvas {
           }
           &:nth-child(4) {
             .first {
-              background: var(--theme4-2);
-              border: 3px solid var(--theme4-1);
+              background: $theme4-2;
+              border: 3px solid $theme4-1;
             }
             .second {
-              background: var(--theme4-1);
+              background: $theme4-1;
             }
           }
           &:last-child {
             .first {
-              background: var(--theme4-2);
-              border: 3px solid var(--theme4-1);
+              background: $theme4-2;
+              border: 3px solid $theme4-1;
             }
             .second {
-              background: var(--theme5-1);
+              background: $theme5-1;
             }
           }
         }
@@ -270,14 +271,14 @@ canvas {
     gap: 0 100px;
     .con1_pic {
       width: 550px;
-      filter: var(--white);
+      filter: $white;
     }
     .con1_text {
       width: 30%;
       .discover {
         font-size: 40px;
         margin-bottom: 0px;
-        color: var(--theme2-2);
+        color: $theme2-2;
       }
       .con1_heading {
         font-size: 60px;
@@ -287,7 +288,7 @@ canvas {
         display: block;
         width: 152px;
         height: 10px;
-        background: var(--theme2-2);
+        background: $theme2-2;
       }
       p {
         font-size: 21px;
@@ -312,7 +313,7 @@ canvas {
       }
       button {
         color: white;
-        background: var(--theme2-3);
+        background: $theme2-3;
         width: 193px;
         height: 54px;
         border-radius: 38.5px;
@@ -320,7 +321,7 @@ canvas {
         font-size: 16px;
       }
       .yel_text {
-        color: var(--theme2-1);
+        color: $theme2-1;
       }
     }
   }
@@ -329,7 +330,7 @@ canvas {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    width: var(--contentBox);
+    width: $contentBox;
     height: 100vh;
     .con2_heading {
       font-size: 60px;
@@ -346,11 +347,11 @@ canvas {
       .colored_heading {
         font-size: 40px;
         vertical-align: top;
-        /* color: var(--theme5-2); */
+        /* color: $theme5-2; */
       }
     }
     img {
-      filter: var(--white);
+      filter: $white;
     }
     .con2_sub_heading {
       display: flex;
@@ -388,7 +389,7 @@ canvas {
       .toleft {
         width: 32px;
         height: 32px;
-        filter: var(--yellow);
+        filter: $yellow;
       }
       .toright {
         margin-left: 30px;
@@ -403,7 +404,7 @@ canvas {
         width: 12px;
         height: 12px;
         border-radius: 50%;
-        background: var(--theme2-1);
+        background: $theme2-1;
         transform: translateY(-10px);
       }
       .dev {
@@ -415,7 +416,7 @@ canvas {
           width: 520px;
           font-weight: 900;
           font-size: 45px;
-          opacity: 10%;
+          opacity: 0.1;
           position: absolute;
           left: -20px;
           top: -10px;
@@ -430,7 +431,7 @@ canvas {
           width: 520px;
           font-weight: 900;
           font-size: 45px;
-          opacity: 10%;
+          opacity: 0.1;
           position: absolute;
           left: -20px;
           top: -10px;
@@ -445,7 +446,7 @@ canvas {
       opacity: 0;
       transform: translateX(-20px);
       z-index: -1;
-      width: var(--contentBox);
+      width: $contentBox;
       display: flex;
       justify-content: space-between;
       position: relative;
@@ -460,7 +461,7 @@ canvas {
           display: block;
           width: 24px;
           height: 6px;
-          background: var(--theme2-1);
+          background: $theme2-1;
           position: absolute;
           top: 30px;
           left: -42px;
@@ -484,7 +485,7 @@ canvas {
             &::before {
               content: url("../img/triangle.svg");
               transform: rotate(180deg);
-              filter: var(--white);
+              filter: $white;
               width: 13px;
               position: absolute;
               top: 2px;
@@ -499,7 +500,7 @@ canvas {
           display: block;
           width: 178px;
           height: 6px;
-          background: var(--theme2-1);
+          background: $theme2-1;
           position: absolute;
           top: 30px;
           right: 0;
@@ -530,7 +531,7 @@ canvas {
           display: block;
           width: 178px;
           height: 6px;
-          background: var(--theme2-1);
+          background: $theme2-1;
           position: absolute;
           top: 30px;
           right: 0;
@@ -538,7 +539,7 @@ canvas {
       }
     }
     .dev_lang_lists {
-      width: var(--contentBox);
+      width: $contentBox;
       justify-content: space-between;
       position: absolute;
       transition: all 0.3s ease-in-out;
@@ -565,7 +566,7 @@ canvas {
           display: block;
           width: 24px;
           height: 6px;
-          background: var(--theme2-1);
+          background: $theme2-1;
           position: absolute;
           top: 30px;
           left: -42px;
@@ -575,7 +576,7 @@ canvas {
           display: block;
           width: 136px;
           height: 6px;
-          background: var(--theme2-1);
+          background: $theme2-1;
           position: absolute;
           top: 30px;
           right: 0;
@@ -599,7 +600,7 @@ canvas {
             &::before {
               content: url("../img/triangle.svg");
               transform: rotate(180deg);
-              filter: var(--white);
+              filter: $white;
               width: 13px;
               position: absolute;
               top: 2px;
@@ -614,7 +615,7 @@ canvas {
           display: block;
           width: 178px;
           height: 6px;
-          background: var(--theme2-1);
+          background: $theme2-1;
           position: absolute;
           top: 30px;
           right: 0;
@@ -630,7 +631,7 @@ canvas {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    width: var(--contentBox);
+    width: $contentBox;
     height: 100vh;
     .con3_heading {
       font-size: 60px;
@@ -648,14 +649,14 @@ canvas {
       .colored_heading {
         font-size: 40px;
         vertical-align: top;
-        /* color: var(--theme5-2); */
+        /* color: $theme5-2; */
       }
     }
     .con3_lists {
       height: 500px;
       opacity: 1;
       transform: translateX(-20px);
-      width: var(--contentBox);
+      width: $contentBox;
       margin: 0 auto;
       display: flex;
       justify-content: center;
@@ -676,7 +677,7 @@ canvas {
           display: block;
           width: 35px;
           height: 6px;
-          background: var(--theme2-3);
+          background: $theme2-3;
           position: absolute;
           top: 80px;
           left: -25px;
@@ -686,7 +687,7 @@ canvas {
           display: block;
           width: 250px;
           height: 6px;
-          background: var(--theme2-3);
+          background: $theme2-3;
           position: absolute;
           top: 80px;
           right: -25px;
@@ -707,16 +708,16 @@ canvas {
         }
         img {
           width: 150px;
-          filter: var(--white);
+          filter: $white;
         }
         .con3_description {
           font-size: 17px;
-          font-weight: light;
+          font-weight: 300;
           position: relative;
           &::before {
             content: url("../img/triangle.svg");
             transform: rotate(180deg);
-            filter: var(--white);
+            filter: $white;
             width: 12px;
             position: absolute;
             top: 2px;
@@ -732,9 +733,9 @@ canvas {
           li {
             display: inline;
             font-size: 17px;
-            font-weight: lighter;
+            font-weight: 100;
             padding: 3px 8px;
-            border: 2px solid var(--theme1-1);
+            border: 2px solid $theme1-1;
             border-radius: 10px;
           }
         }
@@ -762,7 +763,7 @@ canvas {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: var(--contentBox);
+    width: $contentBox;
     .con4_heading {
       font-size: 60px;
       font-weight: 900;
@@ -779,7 +780,7 @@ canvas {
       .colored_heading {
         font-size: 40px;
         vertical-align: top;
-        /* color: var(--theme5-2); */
+        /* color: $theme5-2; */
       }
     }
     .con4_lists {
@@ -832,15 +833,15 @@ canvas {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    h2 {
+    div {
       font-size: 25px;
-      font-weight: light;
+      font-weight: 300;
       margin-bottom: 10px;
       letter-spacing: 1px;
     }
-    h4 {
+    p {
       font-size: 16px;
-      font-weight: lighter;
+      font-weight: 300;
     }
   }
 }
