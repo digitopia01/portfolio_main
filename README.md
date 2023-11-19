@@ -68,3 +68,15 @@
 #### 추가 작업
 
 - `position:sticky` 로 요소 일부분을 화면 밖으로 삐져나가게 하려고 했으나 동작하지 않으므로 결국 `top:0;` 속성값만 부여하고 `transform`속성으로 짜기로 결정
+
+#### 2023-11-19
+
+- `scroll` 이벤트에 따른 도형의 위치 및 모양 변화 구축
+- 기존의 `visul` 이었던 유튜버 `Interactive Developer` 님의 강의를 듣고 만든 `wave` 요소는 너무 무거워서 아예 다른 `wave`로 구축
+
+<img src="img/forreadme9.png">
+<img src="img/forreadme10.png">
+<img src="img/forreadme11.png">
+<img src="img/forreadme12.png">
+<img src="img/forreadme13.png">
+<img src="img/forreadme14.png">

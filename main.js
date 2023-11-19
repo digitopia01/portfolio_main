@@ -1,31 +1,50 @@
-import { WaveGroup } from "./wavegroup.js";
+// 테마 컬러 변수
 
 const themes = document.querySelectorAll(".theme");
 
-// function moveup() {
-//   themes.forEach((item) => {
-//     item.onmouseover = function () {
-//       item.style.transform = `translateY(-30px)`;
-//     };
-//     item.onmouseleave = function () {
-//       item.style.transform = `translateY(0px)`;
-//     };
-//   });
-// }
-// moveup();
+//shapes 변수와 함수
+const shapes = document.querySelectorAll(".shape");
 
-window.onload = () => {
-  new App();
-};
+function shapesMovement(e) {
+  for (const item of shapes) {
+    item.classList.remove("secondposition");
+    item.classList.remove("thirdposition");
+    item.classList.remove("fourthposition");
+    item.classList.remove("footerposition");
+    item.classList.add(e);
+  }
+}
 
 //navigator
 const navigator = document.querySelector(".navigator");
+
+//scroll Event
 window.addEventListener("scroll", () => {
   let scroll = scrollY;
+
+  // NAV 이벤트
+  console.log(scroll);
   if (scroll > 250) {
     navigator.style.display = "flex";
   } else {
     navigator.style.display = "none";
+  }
+
+  // Shapes 이벤트
+  if (scroll < 2850) {
+    shapesMovement();
+  }
+  if (scroll > 2900 && scroll < 4019) {
+    shapesMovement("secondposition");
+  }
+  if (scroll > 4020) {
+    shapesMovement("thirdposition");
+  }
+  if (scroll > 5120) {
+    shapesMovement("fourthposition");
+  }
+  if (scroll > 5950) {
+    shapesMovement("footerposition");
   }
 });
 

@@ -1,61 +1,65 @@
-// app.js
-import { WaveGroup } from "./wavegroup.js";
+const canvas = document.getElementById("waveCanvas");
+const ctx = canvas.getContext("2d");
 
-class App {
-  constructor() {
-    this.visual = document.querySelector(".visual");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-    this.canvas = document.createElement("canvas");
-    this.ctx = this.canvas.getContext("2d");
-    this.visual.appendChild(this.canvas);
+const waves = [
+  {
+    amplitude: 50,
+    frequency: 0.01,
+    phaseX: 0,
+    phaseY: 0,
+    color: "rgba(255, 55, 75, 0.7)",
+  },
+  {
+    amplitude: 30,
+    frequency: 0.015,
+    phaseX: Math.PI / 4,
+    phaseY: Math.PI / 4,
+    color: "rgba(30, 100, 255, 0.7)",
+  },
+  {
+    amplitude: 20,
+    frequency: 0.02,
+    phaseX: Math.PI / 2,
+    phaseY: Math.PI / 2,
+    color: "rgba(255, 200, 50, 0.7)",
+  },
+];
 
-    this.waveGroup = new WaveGroup();
+function drawWave() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    this.themes = document.querySelectorAll(".theme");
-    this.setupThemeClick();
+  waves.forEach((wave) => {
+    ctx.beginPath();
+    ctx.moveTo(0, canvas.height / 3);
 
-    window.addEventListener("resize", this.resize.bind(this), false);
-    this.resize();
-
-    requestAnimationFrame(this.animate.bind(this));
-  }
-
-  setupThemeClick() {
-    this.themes.forEach((item) => {
-      item.addEventListener("click", this.handleThemeClick.bind(this));
-    });
-  }
-
-  handleThemeClick(event) {
-    const rootStyle = getComputedStyle(document.documentElement);
-    const themeIndex = Array.from(this.themes).indexOf(event.currentTarget);
-
-    if (themeIndex >= 0) {
-      this.waveGroup.updateThemeColor(themeIndex, rootStyle);
+    for (let i = 0; i < canvas.width; i++) {
+      const x = wave.amplitude * Math.sin(wave.frequency * i + wave.phaseX) + i;
+      const y =
+        wave.amplitude * Math.sin(wave.frequency * i + wave.phaseY) +
+        canvas.height / 2.8;
+      ctx.quadraticCurveTo(x - 1, y, x, y);
     }
-    console.log("Clicked theme index:", themeIndex);
-  }
 
-  resize() {
-    this.stageWidth = document.body.clientWidth;
-    this.stageHeight = document.body.clientHeight;
+    ctx.lineTo(canvas.width, canvas.height);
+    ctx.lineTo(0, canvas.height);
+    ctx.closePath();
+    ctx.fillStyle = wave.color;
+    ctx.fill();
 
-    this.canvas.width = this.stageWidth * 2;
-    this.canvas.height = this.stageHeight * 2;
-    this.ctx.scale(2, 2);
+    // 웨이브 이동
+    wave.phaseX += 0.01;
+    wave.phaseY += 0.02;
+  });
 
-    this.waveGroup.resize(this.stageWidth, this.stageHeight);
-  }
-
-  animate(t) {
-    this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
-
-    this.waveGroup.draw(this.ctx);
-
-    requestAnimationFrame(this.animate.bind(this));
-  }
+  requestAnimationFrame(drawWave);
 }
 
-window.onload = () => {
-  new App();
-};
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+drawWave();

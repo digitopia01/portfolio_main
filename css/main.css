@@ -78,81 +78,74 @@ canvas {
 }
 #fixed .second_Page {
   position: relative;
-  top: 0px;
+  top: 0;
   height: 470vh;
   z-index: 0;
-}
-#fixed .second_Page .shape {
-  width: 700px;
-  height: 700px;
-  position: sticky;
-  z-index: 15;
   /* ------ SHAPE 1 ------ */
   /* ------ SHAPE 2 ------ */
   /* ------ SHAPE 3 ------ */
 }
-#fixed .second_Page .shape.shape1 {
+#fixed .second_Page .shape {
+  width: 700px;
+  position: sticky;
+  z-index: 15;
+  transition: all 0.5s ease-in-out;
+}
+#fixed .second_Page .shape1 {
+  filter: invert(65%) sepia(92%) saturate(357%) hue-rotate(359deg) brightness(107%) contrast(102%);
   top: 0;
   /* original position */
   transform: translate(-50px, -160px);
-  transform: translate(1850px, 800px) scale(1, 0.8) rotate(200deg);
 }
-#fixed .second_Page .shape.shape1.secondposition {
-  /* second page position */
-  transform: translate(400px, -50px) scale(0.4, 0.2) rotate(240deg);
+#fixed .second_Page .shape1.secondposition {
+  transform: translate(420px, -140px) scale(0.4, 0.2) rotate(240deg);
 }
-#fixed .second_Page .shape.shape1.thirdposition {
-  /* third page position */
-  transform: translate(1850px, 800px) scale(1, 0.8) rotate(200deg);
+#fixed .second_Page .shape1.thirdposition {
+  transform: translate(1800px, 650px) scale(1) rotate(0deg);
 }
-#fixed .second_Page .shape.shape1.fourthposition {
-  /* fourth page position */
+#fixed .second_Page .shape1.fourthposition {
+  transform: translate(-200px, 650px) scale(1) rotate(260deg);
 }
-#fixed .second_Page .shape.shape1.footerposition {
-  /* footer position */
-  transform: translate(640px, 650px) scale(0.2) rotate(40deg);
+#fixed .second_Page .shape1.footerposition {
+  transform: translate(780px, 500px) scale(0.2) rotate(30deg);
 }
-#fixed .second_Page .shape.shape2 {
+#fixed .second_Page .shape2 {
+  filter: invert(31%) sepia(67%) saturate(3227%) hue-rotate(337deg) brightness(107%) contrast(99%);
   top: 0;
   /* original position */
-  transform: translate(700px, -160px);
-  transform: translate(-1000px, 800px) rotate(180deg) scale(0.8);
+  transform: translate(850px, -160px);
 }
-#fixed .second_Page .shape.shape2.secondposition {
-  /* second page position */
-  transform: translate(1150px, 900px);
+#fixed .second_Page .shape2.secondposition {
+  transform: translate(1000px, 800px) rotate(-25deg);
 }
-#fixed .second_Page .shape.shape2.thirdposition {
-  /* third page position */
-  transform: translate(-1000px, 800px) rotate(180deg) scale(0.8);
+#fixed .second_Page .shape2.thirdposition {
+  transform: translate(-900px, 670px) rotate(-25deg);
 }
-#fixed .second_Page .shape.shape2.fourthposition {
-  /* fourth page position */
+#fixed .second_Page .shape2.fourthposition {
+  transform: translate(-280px, -90px) rotate(-45deg) scale(0.3);
 }
-#fixed .second_Page .shape.shape2.footerposition {
-  /* footer position */
-  transform: translate(300px, 800px) scale(0.2) rotate(80deg);
+#fixed .second_Page .shape2.footerposition {
+  transform: translate(500px, 670px) rotate(-45deg) scale(0.2);
 }
-#fixed .second_Page .shape.shape3 {
-  width: 1100px;
-  height: 1100px;
-  top: 0;
+#fixed .second_Page .shape3 {
+  filter: invert(27%) sepia(90%) saturate(2444%) hue-rotate(217deg) brightness(100%) contrast(103%);
+  top: 80%;
+  width: 900px;
+  margin-top: 200px;
   /* original position */
+  transform: translate(80%);
 }
-#fixed .second_Page .shape.shape3.secondposition {
-  /* second page position */
-  transform: translate(-800px, -200px) rotate(180deg);
+#fixed .second_Page .shape3.secondposition {
+  transform: translate(-600px, 100px) rotate(150deg) scale(1.5);
 }
-#fixed .second_Page .shape.shape3.thirdposition {
-  /* third page position */
-  transform: translate(200px, -980px) rotate(180deg) scale(0.3);
+#fixed .second_Page .shape3.thirdposition {
+  transform: translate(310px, -820px) rotate(180deg) scale(0.35);
 }
-#fixed .second_Page .shape.shape3.fourthposition {
-  /* fourth page position */
+#fixed .second_Page .shape3.fourthposition {
+  transform: translate(1700px, -200px) rotate(-50deg) scale(1.1);
 }
-#fixed .second_Page .shape.shape3.footerposition {
-  /* footer position */
-  transform: translate(100px, 1000px) scale(0.22) rotate(20deg);
+#fixed .second_Page .shape3.footerposition {
+  transform: translate(300px, 50px) rotate(20deg) scale(0.2);
 }
 
 /* 움직일 두번째 섹션. */
@@ -466,7 +459,7 @@ canvas {
 }
 #movement .con2_main_lists .design_lists {
   opacity: 0;
-  transform: translateX(-20px);
+  transform: translateX(0px);
   z-index: -1;
   width: 1480px;
   display: flex;
@@ -531,7 +524,7 @@ canvas {
 }
 #movement .con2_main_lists .design_lists.active {
   opacity: 1;
-  transform: translateX(0px);
+  transform: translateX(20px);
   display: flex;
   z-index: 10;
 }
@@ -562,11 +555,11 @@ canvas {
   transition: all 0.3s ease-in-out;
   display: flex;
   opacity: 1;
-  transform: translateX(0px);
+  transform: translateX(20px);
 }
 #movement .con2_main_lists .dev_lang_lists.active {
   opacity: 0;
-  transform: translateX(-20px);
+  transform: translateX(0px);
 }
 #movement .con2_main_lists .dev_lang_lists .nodejs {
   width: 55px !important;
@@ -670,7 +663,6 @@ canvas {
 #movement .con3 .con3_lists {
   height: 500px;
   opacity: 1;
-  transform: translateX(-20px);
   width: 1480px;
   margin: 0 auto;
   display: flex;
