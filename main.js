@@ -1,8 +1,7 @@
 // 테마 컬러 변수
-
 const themes = document.querySelectorAll(".theme");
 
-//shapes 변수와 함수
+// shapes 변수와 함수
 const shapes = document.querySelectorAll(".shape");
 
 function shapesMovement(e) {
@@ -15,10 +14,10 @@ function shapesMovement(e) {
   }
 }
 
-//navigator
+// navigator
 const navigator = document.querySelector(".navigator");
 
-//scroll Event
+// scroll Event
 window.addEventListener("scroll", () => {
   let scroll = scrollY;
 
@@ -46,63 +45,63 @@ window.addEventListener("scroll", () => {
   if (scroll > 5700) {
     shapesMovement("footerposition");
   }
+});
 
-  // scroll 감지에 따른 페이지 이동
-  const elm = document.querySelectorAll(".section");
-  const elmCount = elm.length;
-  let isScrolling = false;
+// scroll 감지에 따른 페이지 이동
+const elm = document.querySelectorAll(".section");
+const elmCount = elm.length;
+let isScrolling = false;
 
-  elm.forEach(function (item, index) {
-    item.addEventListener("wheel", function (event) {
-      event.preventDefault();
+elm.forEach(function (item, index) {
+  item.addEventListener("wheel", function (event) {
+    event.preventDefault();
 
-      if (!isScrolling) {
-        isScrolling = true;
+    if (!isScrolling) {
+      isScrolling = true;
 
-        let delta = 0;
+      let delta = 0;
 
-        if (!event) event = window.event;
-        if (event.wheelDelta) {
-          delta = event.wheelDelta / 120;
-          if (window.opera) delta = -delta;
-        } else if (event.detail) delta = -event.detail / 3;
+      if (!event) event = window.event;
+      if (event.wheelDelta) {
+        delta = event.wheelDelta / 120;
+        if (window.opera) delta = -delta;
+      } else if (event.detail) delta = -event.detail / 3;
 
-        let moveTop = window.scrollY;
-        let elmSelector = elm[index];
+      let moveTop = window.scrollY;
+      let elmSelector = elm[index];
 
-        // wheel down: move to next section
-        if (delta < 0) {
-          if (elmSelector !== elmCount - 1) {
-            try {
-              moveTop =
-                window.pageYOffset +
-                elmSelector.nextElementSibling.getBoundingClientRect().top;
-            } catch (e) {}
-          }
+      // wheel down: move to next section
+      if (delta < 0) {
+        if (elmSelector !== elmCount - 1) {
+          try {
+            moveTop =
+              window.pageYOffset +
+              elmSelector.nextElementSibling.getBoundingClientRect().top;
+          } catch (e) {}
         }
-        // wheel up: move to previous section
-        else {
-          if (elmSelector !== 0) {
-            try {
-              moveTop =
-                window.pageYOffset +
-                elmSelector.previousElementSibling.getBoundingClientRect().top;
-            } catch (e) {}
-          }
-        }
-
-        const body = document.querySelector("html");
-        window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
-
-        setTimeout(function () {
-          isScrolling = false;
-        }, 300); // 0.3초 동안 감지하지 않도록 설정
       }
-    });
+      // wheel up: move to previous section
+      else {
+        if (elmSelector !== 0) {
+          try {
+            moveTop =
+              window.pageYOffset +
+              elmSelector.previousElementSibling.getBoundingClientRect().top;
+          } catch (e) {}
+        }
+      }
+
+      const body = document.querySelector("html");
+      window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+
+      setTimeout(function () {
+        isScrolling = false;
+      }, 300); // 0.3초 동안 감지하지 않도록 설정
+    }
   });
 });
 
-//con2 버튼 클릭하여 리스트 변경
+// con2 버튼 클릭하여 리스트 변경
 const con2 = document.querySelector(".con2");
 const changeButtons = con2.querySelectorAll(".appear");
 const con2SubHeadings = con2.querySelectorAll(".con2heading");
@@ -120,3 +119,13 @@ function fadeslideclick() {
 for (let item of changeButtons) {
   item.addEventListener("click", fadeslideclick);
 }
+
+// 스크롤 위치에 따라 섹션으로 자동 스크롤
+const sectionButtons = document.querySelectorAll(".section-button");
+
+sectionButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    const targetSection = elm[index];
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  });
+});

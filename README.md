@@ -90,7 +90,6 @@
 ### Agenda
 
 - visual 테마 컬러 클릭 시 변경되도록 설정
-- scroll event 플러그인 찾아서 적용하기
 - con2 내용 전체적으로 변경할 필요 있음
   - Design Tools 의 경우 이미지를 넣는 것이 어떨지 구상해보기
 - con3 hover시 이벤트 js로 만들어보기
