@@ -80,3 +80,20 @@
 <img src="img/forreadme12.png">
 <img src="img/forreadme13.png">
 <img src="img/forreadme14.png">
+
+#### 2023-11-19
+
+- `visual` 페이지가 마음에 안들어서 코드 수정
+
+<img src="img/forreadme15.png">
+
+### Agenda
+
+- visual 테마 컬러 클릭 시 변경되도록 설정
+- scroll event 플러그인 찾아서 적용하기
+- con2 내용 전체적으로 변경할 필요 있음
+  - Design Tools 의 경우 이미지를 넣는 것이 어떨지 구상해보기
+- con3 hover시 이벤트 js로 만들어보기
+  - 상하좌우 어떤 방향에서 들어오든 그 방향에서 background 컬러 생성되도록
+  - con3 유닛 클릭 시 모달창으로 프로젝트 상세페이지 나오도록 구성
+- con4 thumnail random color 로 구성되도록 짜기 rbga 를 사용하는 것이 좋을 것 같음

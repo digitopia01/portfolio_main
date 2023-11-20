@@ -780,6 +780,9 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           top: 80px;
           right: -25px;
         }
+        a {
+          color: white;
+        }
         h3 {
           font-size: 40px;
           margin-bottom: 0px;
@@ -902,7 +905,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
         }
       }
     }
-    button {
+    .blogmore {
       margin: 50px auto 0;
       width: 220px;
       padding: 14px 0;
@@ -913,6 +916,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
       font-weight: bolder;
       border: none;
       cursor: pointer;
+      text-align: center;
     }
   }
   footer {
