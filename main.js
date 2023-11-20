@@ -24,28 +24,82 @@ window.addEventListener("scroll", () => {
 
   // NAV 이벤트
   console.log(scroll);
-  if (scroll > 250) {
+  if (scroll > 1000) {
     navigator.style.display = "flex";
   } else {
     navigator.style.display = "none";
   }
 
   // Shapes 이벤트
-  if (scroll < 2850) {
+  if (scroll < 1900) {
     shapesMovement();
   }
-  if (scroll > 2900 && scroll < 4019) {
+  if (scroll > 2500) {
     shapesMovement("secondposition");
   }
-  if (scroll > 4020) {
+  if (scroll > 3200) {
     shapesMovement("thirdposition");
   }
-  if (scroll > 5120) {
+  if (scroll > 4500) {
     shapesMovement("fourthposition");
   }
-  if (scroll > 5950) {
+  if (scroll > 5700) {
     shapesMovement("footerposition");
   }
+
+  // scroll 감지에 따른 페이지 이동
+  const elm = document.querySelectorAll(".section");
+  const elmCount = elm.length;
+  let isScrolling = false;
+
+  elm.forEach(function (item, index) {
+    item.addEventListener("wheel", function (event) {
+      event.preventDefault();
+
+      if (!isScrolling) {
+        isScrolling = true;
+
+        let delta = 0;
+
+        if (!event) event = window.event;
+        if (event.wheelDelta) {
+          delta = event.wheelDelta / 120;
+          if (window.opera) delta = -delta;
+        } else if (event.detail) delta = -event.detail / 3;
+
+        let moveTop = window.scrollY;
+        let elmSelector = elm[index];
+
+        // wheel down: move to next section
+        if (delta < 0) {
+          if (elmSelector !== elmCount - 1) {
+            try {
+              moveTop =
+                window.pageYOffset +
+                elmSelector.nextElementSibling.getBoundingClientRect().top;
+            } catch (e) {}
+          }
+        }
+        // wheel up: move to previous section
+        else {
+          if (elmSelector !== 0) {
+            try {
+              moveTop =
+                window.pageYOffset +
+                elmSelector.previousElementSibling.getBoundingClientRect().top;
+            } catch (e) {}
+          }
+        }
+
+        const body = document.querySelector("html");
+        window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+
+        setTimeout(function () {
+          isScrolling = false;
+        }, 300); // 0.3초 동안 감지하지 않도록 설정
+      }
+    });
+  });
 });
 
 //con2 버튼 클릭하여 리스트 변경

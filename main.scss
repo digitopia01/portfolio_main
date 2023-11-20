@@ -113,29 +113,6 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
   /* header navigator */
   .first_Page {
     height: 160vh;
-    header {
-      position: fixed;
-      top: 50%;
-      right: 50px;
-      transform: translateY(-50%);
-      z-index: 30;
-      gap: 60px;
-      h1 {
-        width: 0;
-        height: 0;
-        overflow: hidden;
-      }
-      .svg {
-        width: 50px;
-        height: 50px;
-        filter: $white;
-      }
-      .navigator {
-        flex-direction: column;
-        gap: 20px 0;
-        display: none;
-      }
-    }
   }
   .second_Page {
     position: relative;
@@ -164,7 +141,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
         transform: translate(-200px, 650px) scale(1) rotate(260deg);
       }
       &.footerposition {
-        transform: translate(780px, 500px) scale(0.2) rotate(30deg);
+        transform: translate(760px, 350px) scale(0.2) rotate(30deg);
       }
     }
     /* ------ SHAPE 2 ------ */
@@ -183,7 +160,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
         transform: translate(-280px, -90px) rotate(-45deg) scale(0.3);
       }
       &.footerposition {
-        transform: translate(500px, 670px) rotate(-45deg) scale(0.2);
+        transform: translate(420px, 580px) rotate(-45deg) scale(0.2);
       }
     }
     /* ------ SHAPE 3 ------ */
@@ -204,7 +181,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
         transform: translate(1700px, -200px) rotate(-50deg) scale(1.1);
       }
       &.footerposition {
-        transform: translate(300px, 50px) rotate(20deg) scale(0.2);
+        transform: translate(320px, 140px) rotate(20deg) scale(0.2);
       }
     }
   }
@@ -217,6 +194,31 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
   /* top: -100vh; */
   left: 0%;
   z-index: 20;
+
+  /* header */
+  header {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    z-index: 30;
+    gap: 60px;
+    h1 {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+    .svg {
+      width: 50px;
+      height: 50px;
+      filter: $white;
+    }
+    .navigator {
+      flex-direction: column;
+      gap: 20px 0;
+      display: none;
+    }
+  }
 
   /* visual */
   .visual {
@@ -920,7 +922,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
     }
   }
   footer {
-    height: 40vh;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

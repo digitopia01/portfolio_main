@@ -53,29 +53,6 @@ canvas {
 #fixed .first_Page {
   height: 160vh;
 }
-#fixed .first_Page header {
-  position: fixed;
-  top: 50%;
-  right: 50px;
-  transform: translateY(-50%);
-  z-index: 30;
-  gap: 60px;
-}
-#fixed .first_Page header h1 {
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-#fixed .first_Page header .svg {
-  width: 50px;
-  height: 50px;
-  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
-}
-#fixed .first_Page header .navigator {
-  flex-direction: column;
-  gap: 20px 0;
-  display: none;
-}
 #fixed .second_Page {
   position: relative;
   top: 0;
@@ -107,7 +84,7 @@ canvas {
   transform: translate(-200px, 650px) scale(1) rotate(260deg);
 }
 #fixed .second_Page .shape1.footerposition {
-  transform: translate(780px, 500px) scale(0.2) rotate(30deg);
+  transform: translate(760px, 350px) scale(0.2) rotate(30deg);
 }
 #fixed .second_Page .shape2 {
   filter: invert(31%) sepia(67%) saturate(3227%) hue-rotate(337deg) brightness(107%) contrast(99%);
@@ -125,7 +102,7 @@ canvas {
   transform: translate(-280px, -90px) rotate(-45deg) scale(0.3);
 }
 #fixed .second_Page .shape2.footerposition {
-  transform: translate(500px, 670px) rotate(-45deg) scale(0.2);
+  transform: translate(420px, 580px) rotate(-45deg) scale(0.2);
 }
 #fixed .second_Page .shape3 {
   filter: invert(27%) sepia(90%) saturate(2444%) hue-rotate(217deg) brightness(100%) contrast(103%);
@@ -145,7 +122,7 @@ canvas {
   transform: translate(1700px, -200px) rotate(-50deg) scale(1.1);
 }
 #fixed .second_Page .shape3.footerposition {
-  transform: translate(300px, 50px) rotate(20deg) scale(0.2);
+  transform: translate(320px, 140px) rotate(20deg) scale(0.2);
 }
 
 /* 움직일 두번째 섹션. */
@@ -155,7 +132,31 @@ canvas {
   /* top: -100vh; */
   left: 0%;
   z-index: 20;
+  /* header */
   /* visual */
+}
+#movement header {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  z-index: 30;
+  gap: 60px;
+}
+#movement header h1 {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+#movement header .svg {
+  width: 50px;
+  height: 50px;
+  filter: invert(100%) sepia(11%) saturate(7500%) hue-rotate(232deg) brightness(118%) contrast(116%);
+}
+#movement header .navigator {
+  flex-direction: column;
+  gap: 20px 0;
+  display: none;
 }
 #movement .visual {
   width: 100%;
@@ -834,7 +835,7 @@ canvas {
   text-align: center;
 }
 #movement footer {
-  height: 40vh;
+  height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
