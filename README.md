@@ -87,6 +87,10 @@
 
 <img src="img/forreadme15.png">
 
+#### 2023-11-21
+
+- 테마 컬러 css에서 js 로 불러온 후 themeColorChange 함수로 변경 코드 작성, html 요소들에 클래스명 부여한 하면 해당 기능 구축완료
+
 ### Agenda
 
 - visual 테마 컬러 클릭 시 변경되도록 설정
