@@ -25,9 +25,9 @@
           <canvas id="waveCanvas"></canvas>
         </div>
         <div class="second_Page">
-          <img src="img/shapes_1.svg" alt="" class="shape1 shape svg_1" />
-          <img src="img/shapes_2.svg" alt="" class="shape2 shape svg_2" />
-          <img src="img/shapes_3.svg" alt="" class="shape3 shape svg_3" />
+          <img src="img/shapes_1.svg" alt="" class="shape1 shape filter_1" />
+          <img src="img/shapes_2.svg" alt="" class="shape2 shape filter_2" />
+          <img src="img/shapes_3.svg" alt="" class="shape3 shape filter_3" />
         </div>
       </section>
       <section id="movement">
@@ -36,34 +36,42 @@
           <ul class="navigator">
             <li class="home">
               <a href="#" class="toHome">
-                <img class="svg home" src="img/home.svg" alt="HOME" />
+                <img class="svg home filter_5" src="img/home.svg" alt="HOME" />
               </a>
             </li>
             <li class="me">
               <a href="#" class="toMe">
-                <img class="svg me" src="img/me.svg" alt="ME" />
+                <img class="svg me filter_5" src="img/me.svg" alt="ME" />
               </a>
             </li>
             <li>
               <a href="#" class="toProject">
-                <img class="svg project" src="img/project.svg" alt="PROJECTS" />
+                <img
+                  class="svg project filter_5"
+                  src="img/project.svg"
+                  alt="PROJECTS"
+                />
               </a>
             </li>
             <li class="blog">
               <a href="#" class="toBlog">
-                <img class="svg blog" src="img/blog.svg" alt="BLOG" />
+                <img class="svg blog filter_5" src="img/blog.svg" alt="BLOG" />
               </a>
             </li>
             <li>
               <a href="https://github.com/digitopia01" class="toGithub">
-                <img class="svg github" src="img/github.svg" alt="GITHUB" />
+                <img
+                  class="svg github filter_5"
+                  src="img/github.svg"
+                  alt="GITHUB"
+                />
               </a>
             </li>
           </ul>
         </header>
         <div class="visual section">
           <div class="visual_elements">
-            <h1>INTERPLAY</h1>
+            <h1 class="visualText">INTERPLAY</h1>
             <ul class="colorThemes">
               <li class="theme">
                 <h2>HOME</h2>
@@ -99,12 +107,15 @@
           </div>
         </div>
         <div class="con1 section">
-          <div class="con1_pic"><img src="img/con1_2.svg" alt="" /></div>
+          <!-- con1 메인 svg 파일 색상이 테마 컬러에 없으므로 4번으로 부여 -->
+          <div class="con1_pic">
+            <img class="filter_5" src="img/con1_2.svg" alt="" />
+          </div>
           <div class="con1_text">
-            <h3 class="discover">Discover</h3>
-            <h2 class="con1_heading">About Me</h2>
-            <span class="underline"></span>
-            <p>
+            <h3 class="discover color_1 theme2ColBlue">Discover</h3>
+            <h2 class="con1_heading color_5">About Me</h2>
+            <span class="underline background_1 theme2BgBlue"></span>
+            <p class="color_5">
               안녕하세요 나현국입니다. 🕺🏻 <br />
               저는 인테리어 도배 일을 하던 사람이었습니다. <br />
               서울에 위치한 학원에서 디자인/프론트엔드 개발을 배웠습니다. <br />
@@ -113,54 +124,61 @@
               한 때 컴퓨터 분해 및 조립 하는 것이 취미 였는데, 그 연장선에서
               저에게 “개발”이라는 분야는 좋은 직업이자 취미가 됩니다.
             </p>
-            <h4>PERSONAL INFO</h4>
-            <div class="personal_info">
+            <h4 class="theme2ColWhite color_1">PERSONAL INFO</h4>
+            <div class="personal_info color_5">
               <ul>
-                <li>Name : <span class="yel_text theme1__2">나현국</span></li>
+                <li>Name : <span class="yel_text color_1">나현국</span></li>
                 <li>
-                  Phone : <span class="yel_text theme1__2">010.3581.0341</span>
+                  Phone : <span class="yel_text color_1">010.3581.0341</span>
                 </li>
                 <li>
                   Email :
-                  <span class="yel_text theme1__2">lnhglo00@gmail.com</span>
+                  <span class="yel_text color_1">lnhglo00@gmail.com</span>
                 </li>
               </ul>
               <ul>
-                <li>
-                  Age : <span class="yel_text theme1__2">30, 1993.02</span>
-                </li>
+                <li>Age : <span class="yel_text color_1">30, 1993.02</span></li>
                 <li>
                   Address :
-                  <span class="yel_text theme1__2">경기도 부천시</span>
+                  <span class="yel_text color_1">경기도 부천시</span>
                 </li>
               </ul>
             </div>
-            <button class="about_Me">MORE ABOUT ME</button>
+            <button class="about_Me background_2">MORE ABOUT ME</button>
           </div>
         </div>
         <div class="con2 section">
-          <h2 class="con2_heading">
-            About my<span class="dot">.</span> <span class="upperline"></span
-            ><span class="colored_heading">SKILLS</span>
+          <h2 class="con2_heading color_5">
+            About my<span class="dot color_5">.</span>
+            <span class="upperline background_2 theme2BgBlack"></span
+            ><span class="colored_heading color_2 theme2ColBlack">SKILLS</span>
           </h2>
           <div class="con2_sub_heading">
-            <img src="img/triangle.svg" alt="" class="toleft appear" />
+            <img src="img/triangle.svg" alt="" class="toleft appear filter_1" />
             <div class="dev_lang_heading con2heading">
-              <img src="img/gear.svg" alt="" class="gear" />
-              <span class="con_dot"></span>
-              <h3 class="dev">DEV LANGUAGE</h3>
+              <img src="img/gear.svg" alt="" class="gear filter_5" />
+              <span class="con_dot background_3 theme2BgYellow"></span>
+              <h3 class="dev color_5">DEV LANGUAGE</h3>
             </div>
             <div class="design_heading con2heading">
-              <img src="img/pen.svg" alt="" class="gear" />
-              <span class="con_dot"></span>
-              <h3 class="design">DESIGN TOOLS</h3>
+              <img src="img/pen.svg" alt="" class="gear filter_5" />
+              <span class="con_dot background_3 theme2BgYellow"></span>
+              <h3 class="design color_5">DESIGN TOOLS</h3>
             </div>
-            <img src="img/triangle.svg" alt="" class="toright appear" />
+            <img
+              src="img/triangle.svg"
+              alt=""
+              class="toright appear filter_1"
+            />
           </div>
-          <div class="con2_main_lists">
+          <div class="con2_main_lists color_5">
             <ul class="dev_lang_lists lists">
               <li>
-                <img src="img/htmlcss.svg" alt="HTMLCSS" />
+                <img
+                  class="filter_3 theme2FilWhite"
+                  src="img/htmlcss.svg"
+                  alt="HTMLCSS"
+                />
                 <h3>HTML5/CSS3</h3>
                 <ul class="list_description">
                   <li class="li_icon">
@@ -174,7 +192,11 @@
                 </ul>
               </li>
               <li>
-                <img src="img/js.svg" alt="HTMLCSS" />
+                <img
+                  class="filter_3 theme2FilWhite"
+                  src="img/js.svg"
+                  alt="HTMLCSS"
+                />
                 <h3>JavaScript</h3>
                 <ul class="list_description">
                   <li class="li_icon">
@@ -187,7 +209,11 @@
                 </ul>
               </li>
               <li>
-                <img class="reactjs" src="img/react.svg" alt="HTMLCSS" />
+                <img
+                  class="reactjs filter_3 theme2FilWhite"
+                  src="img/react.svg"
+                  alt="HTMLCSS"
+                />
                 <h3>React.js</h3>
                 <ul class="list_description">
                   <li class="li_icon">
@@ -203,7 +229,11 @@
                 </ul>
               </li>
               <li>
-                <img class="nodejs" src="img/nodejs.svg" alt="HTMLCSS" />
+                <img
+                  class="nodejs filter_3 theme2FilWhite"
+                  src="img/nodejs.svg"
+                  alt="HTMLCSS"
+                />
                 <h3>Node.js</h3>
                 <ul class="list_description">
                   <li class="li_icon">
@@ -223,7 +253,7 @@
             <ul class="design_lists lists">
               <li>
                 <img
-                  class="photoshop"
+                  class="photoshop filter_3 theme2FilWhite"
                   src="img/photoshop.svg"
                   alt="Photoshop"
                 />
@@ -240,7 +270,11 @@
                 </ul>
               </li>
               <li>
-                <img src="img/ai.svg" alt="Illustrator" />
+                <img
+                  class="filter_3 theme2FilWhite"
+                  src="img/ai.svg"
+                  alt="Illustrator"
+                />
                 <h3>ILLUSTRATOR</h3>
                 <ul class="list_description">
                   <li class="li_icon">
@@ -253,7 +287,11 @@
                 </ul>
               </li>
               <li>
-                <img class="figma" src="img/figma.svg" alt="Figma" />
+                <img
+                  class="figma filter_3 theme2FilWhite"
+                  src="img/figma.svg"
+                  alt="Figma"
+                />
                 <h3>FIGMA</h3>
                 <ul class="list_description">
                   <li class="li_icon">
@@ -269,7 +307,11 @@
                 </ul>
               </li>
               <li>
-                <img class="adobeXD" src="img/xd.svg" alt="Adobe XD" />
+                <img
+                  class="adobeXD filter_3 theme2FilWhite"
+                  src="img/xd.svg"
+                  alt="Adobe XD"
+                />
                 <h3>Adobe XD</h3>
                 <ul class="list_description">
                   <li class="li_icon">
@@ -286,14 +328,21 @@
           </div>
         </div>
         <div class="con3 section">
-          <h2 class="con3_heading">
-            About my<span class="dot">.</span> <span class="upperline"></span
-            ><span class="colored_heading">Projects</span>
+          <h2 class="con3_heading color_5">
+            About my<span class="dot">.</span>
+            <span class="upperline background_1 theme2BgBlack"></span
+            ><span class="colored_heading color_1 theme2ColBlack"
+              >Projects</span
+            >
           </h2>
           <ul class="con3_lists">
             <li>
-              <a href="">
-                <img src="img/my_melody.svg" alt="SANRIO.COM" />
+              <a class="color_5" href="">
+                <img
+                  class="filter_3 theme2FilWhite"
+                  src="img/my_melody.svg"
+                  alt="SANRIO.COM"
+                />
                 <h3>SANRIO</h3>
                 <p class="date">2023.08 - 2023.09</p>
                 <h4>Description</h4>
@@ -309,9 +358,13 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a class="color_5" href="">
                 <div class="img_wrap">
-                  <img src="img/question.svg" alt="SANRIO.COM" />
+                  <img
+                    class="filter_3 theme2FilWhite"
+                    src="img/question.svg"
+                    alt="SANRIO.COM"
+                  />
                 </div>
                 <h2>GETTING READY!</h2>
                 <!-- <h3>SANRIO</h3>
@@ -325,9 +378,13 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a class="color_5" href="">
                 <div class="img_wrap">
-                  <img src="img/question.svg" alt="SANRIO.COM" />
+                  <img
+                    class="filter_3 theme2FilWhite"
+                    src="img/question.svg"
+                    alt="SANRIO.COM"
+                  />
                 </div>
                 <h2>GETTING READY!</h2>
                 <!-- <h3>SANRIO</h3>
@@ -343,14 +400,15 @@
           </ul>
         </div>
         <div class="con4 section">
-          <h2 class="con4_heading">
-            About my<span class="dot">.</span> <span class="upperline"></span
-            ><span class="colored_heading">Blog</span>
+          <h2 class="con4_heading color_5">
+            About my<span class="dot">.</span>
+            <span class="upperline background_5 theme2BgBlack"></span
+            ><span class="colored_heading color_5 theme2ColBlack">Blog</span>
           </h2>
           <ul class="con4_lists">
             <li>
               <a href="">
-                <h3 class="thumbnail">ABOUT HTML</h3>
+                <h3 class="thumbnail randomBg">ABOUT HTML</h3>
                 <div class="lists_texts">
                   <h3>HTML</h3>
                   <p>
@@ -365,7 +423,7 @@
             </li>
             <li>
               <a href="">
-                <h3 class="thumbnail">ABOUT HTML</h3>
+                <h3 class="thumbnail randomBg">ABOUT HTML</h3>
                 <div class="lists_texts">
                   <h3>HTML</h3>
                   <p>
@@ -380,7 +438,7 @@
             </li>
             <li>
               <a href="">
-                <h3 class="thumbnail">ABOUT HTML</h3>
+                <h3 class="thumbnail randomBg">ABOUT HTML</h3>
                 <div class="lists_texts">
                   <h3>HTML</h3>
                   <p>
@@ -395,7 +453,7 @@
             </li>
             <li>
               <a href="">
-                <h3 class="thumbnail">ABOUT HTML</h3>
+                <h3 class="thumbnail randomBg">ABOUT HTML</h3>
                 <div class="lists_texts">
                   <h3>HTML</h3>
                   <p>
@@ -410,7 +468,7 @@
             </li>
             <li>
               <a href="">
-                <h3 class="thumbnail">ABOUT HTML</h3>
+                <h3 class="thumbnail randomBg">ABOUT HTML</h3>
                 <div class="lists_texts">
                   <h3>HTML</h3>
                   <p>
@@ -425,7 +483,7 @@
             </li>
             <li>
               <a href="">
-                <h3 class="thumbnail">ABOUT HTML</h3>
+                <h3 class="thumbnail randomBg">ABOUT HTML</h3>
                 <div class="lists_texts">
                   <h3>HTML</h3>
                   <p>
@@ -440,7 +498,7 @@
             </li>
             <li>
               <a href="">
-                <h3 class="thumbnail">ABOUT HTML</h3>
+                <h3 class="thumbnail randomBg">ABOUT HTML</h3>
                 <div class="lists_texts">
                   <h3>HTML</h3>
                   <p>
@@ -455,7 +513,7 @@
             </li>
             <li>
               <a href="">
-                <h3 class="thumbnail">ABOUT HTML</h3>
+                <h3 class="thumbnail randomBg">ABOUT HTML</h3>
                 <div class="lists_texts">
                   <h3>HTML</h3>
                   <p>
@@ -473,7 +531,7 @@
             >MORE POSTS</a
           >
         </div>
-        <footer class="section">
+        <footer class="section color_1 theme2ColWhite">
           <div>COPYRIGHT 2023. CHRISNA. ALL RIGHTS Reserved.</div>
           <p>
             This website is not built for any commercial purposes & actions.<br />

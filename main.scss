@@ -19,15 +19,15 @@ a {
   --whiteText: #ffffff;
 
   /* 테마 컬러 설정 */
-  --theme1-1: #f8f8f8;
-  --theme1-2: #5f7a75;
+  --theme1-1: #5f7a75;
+  --theme1-2: #a0a07d;
   --theme1-3: #d2b6a0;
-  --theme1-4: #a0a07d;
+  --theme1-4: #f8f8f8;
   --theme1-5: #333333;
 
   --theme2-1: #ffce32;
-  --theme2-2: #1d63ff;
-  --theme2-3: #fe3a4a;
+  --theme2-2: #fe3a4a;
+  --theme2-3: #1d63ff;
 
   --theme3-1: #e9f1fa;
   --theme3-2: #00abe4;
@@ -51,23 +51,23 @@ a {
   --yellow: invert(80%) sepia(98%) saturate(3529%) hue-rotate(324deg)
     brightness(98%) contrast(106%);
 
-  --svg-theme1-1: invert(95%) sepia(1%) saturate(555%) hue-rotate(351deg)
-    brightness(122%) contrast(95%);
-  --svg-theme1-2: invert(46%) sepia(29%) saturate(240%) hue-rotate(119deg)
+  --svg-theme1-1: invert(46%) sepia(29%) saturate(240%) hue-rotate(119deg)
     brightness(92%) contrast(90%);
-  --svg-theme1-3: invert(100%) sepia(21%) saturate(6751%) hue-rotate(292deg)
-    brightness(91%) contrast(84%);
-  --svg-theme1-4: invert(69%) sepia(10%) saturate(751%) hue-rotate(22deg)
+  --svg-theme1-2: invert(69%) sepia(10%) saturate(751%) hue-rotate(22deg)
     brightness(89%) contrast(92%);
+  --svg-theme1-3: invert(87%) sepia(9%) saturate(863%) hue-rotate(340deg)
+    brightness(86%) contrast(91%);
+  --svg-theme1-4: invert(95%) sepia(1%) saturate(555%) hue-rotate(351deg)
+    brightness(122%) contrast(95%);
   --svg-theme1-5: invert(13%) sepia(14%) saturate(34%) hue-rotate(327deg)
     brightness(104%) contrast(84%);
 
   --svg-theme2-1: invert(65%) sepia(92%) saturate(357%) hue-rotate(359deg)
     brightness(107%) contrast(102%);
-  --svg-theme2-2: invert(27%) sepia(90%) saturate(2444%) hue-rotate(217deg)
-    brightness(100%) contrast(103%);
-  --svg-theme2-3: invert(31%) sepia(67%) saturate(3227%) hue-rotate(337deg)
+  --svg-theme2-2: invert(31%) sepia(67%) saturate(3227%) hue-rotate(337deg)
     brightness(107%) contrast(99%);
+  --svg-theme2-3: invert(27%) sepia(90%) saturate(2444%) hue-rotate(217deg)
+    brightness(100%) contrast(103%);
 
   --svg-theme3-1: invert(89%) sepia(16%) saturate(305%) hue-rotate(191deg)
     brightness(105%) contrast(96%);
@@ -85,6 +85,26 @@ a {
     brightness(99%) contrast(108%);
   --svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
     brightness(90%) contrast(100%);
+
+  /* pseudo elements 가상 선택자 컬러변경 */
+  --pseudoFilter: black;
+  --pseudoColor: black;
+  --pseudoBorder: black;
+
+  /* Random color 블로그 포스팅 */
+  --random1: #dfadad;
+  --random2: #cc826b;
+  --random3: #ebba1f;
+  --random4: #a3ced3;
+  --random5: #ea8a8a;
+  --random6: #8097d1;
+  --random7: #cf9bbd;
+  --random8: #83aa80;
+}
+
+/* theme color 관련 transition */
+.visualText {
+  transition: all 0.5s ease-in-out;
 }
 
 body {
@@ -290,6 +310,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
       flex-direction: column;
       gap: 20px 0;
       display: none;
+      transition: all 0.4s ease-in-out;
     }
   }
 
@@ -435,7 +456,6 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
     gap: 0 100px;
     .con1_pic {
       width: 550px;
-      filter: $white;
     }
     .con1_text {
       width: 30%;
@@ -626,7 +646,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           display: block;
           width: 24px;
           height: 6px;
-          background: $theme2-1;
+          background: var(--pseudoColor);
           position: absolute;
           top: 30px;
           left: -42px;
@@ -650,7 +670,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
             &::before {
               content: url("../img/triangle.svg");
               transform: rotate(180deg);
-              filter: $white;
+              filter: var(--pseudoFilter);
               width: 13px;
               position: absolute;
               top: 2px;
@@ -665,7 +685,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           display: block;
           width: 178px;
           height: 6px;
-          background: $theme2-1;
+          background: var(--pseudoColor);
           position: absolute;
           top: 30px;
           right: 0;
@@ -696,7 +716,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           display: block;
           width: 178px;
           height: 6px;
-          background: $theme2-1;
+          background: var(--pseudoColor);
           position: absolute;
           top: 30px;
           right: 0;
@@ -731,7 +751,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           display: block;
           width: 24px;
           height: 6px;
-          background: $theme2-1;
+          background: var(--pseudoColor);
           position: absolute;
           top: 30px;
           left: -42px;
@@ -741,7 +761,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           display: block;
           width: 136px;
           height: 6px;
-          background: $theme2-1;
+          background: var(--pseudoColor);
           position: absolute;
           top: 30px;
           right: 0;
@@ -765,7 +785,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
             &::before {
               content: url("../img/triangle.svg");
               transform: rotate(180deg);
-              filter: $white;
+              filter: var(--pseudoFilter);
               width: 13px;
               position: absolute;
               top: 2px;
@@ -780,7 +800,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           display: block;
           width: 178px;
           height: 6px;
-          background: $theme2-1;
+          background: var(--pseudoColor);
           position: absolute;
           top: 30px;
           right: 0;
@@ -841,7 +861,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           display: block;
           width: 35px;
           height: 6px;
-          background: $theme2-3;
+          background: var(--pseudoColor);
           position: absolute;
           top: 80px;
           left: -25px;
@@ -851,7 +871,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           display: block;
           width: 250px;
           height: 6px;
-          background: $theme2-3;
+          background: var(--pseudoColor);
           position: absolute;
           top: 80px;
           right: -25px;
@@ -879,12 +899,12 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
         }
         .con3_description {
           font-size: 17px;
-          font-weight: 300;
+          font-weight: 400;
           position: relative;
           &::before {
             content: url("../img/triangle.svg");
             transform: rotate(180deg);
-            filter: $white;
+            filter: var(--pseudoFilter);
             width: 12px;
             position: absolute;
             top: 2px;
@@ -902,7 +922,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
             font-size: 17px;
             font-weight: 100;
             padding: 3px 8px;
-            border: 2px solid $theme1-1;
+            border: 2px solid var(--pseudoBorder);
             border-radius: 10px;
           }
         }
