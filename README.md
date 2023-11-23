@@ -91,6 +91,16 @@
 
 - 테마 컬러 css에서 js 로 불러온 후 themeColorChange 함수로 변경 코드 작성, html 요소들에 클래스명 부여한 하면 해당 기능 구축완료
 
+#### 2023-11-22~23
+
+- 테마 컬러 `HOME, PRIMARY, COZY, B&W, B&Y `모두 적용 완료
+
+<img src="img/forreadme16.png">
+<img src="img/forreadme17.png">
+<img src="img/forreadme18.png">
+<img src="img/forreadme19.png">
+<img src="img/forreadme20.png">
+
 ### Agenda
 
 - visual 테마 컬러 클릭 시 변경되도록 설정

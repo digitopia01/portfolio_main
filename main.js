@@ -12,6 +12,7 @@ const theme1_1 = rootStyle.getPropertyValue("--theme1-1"),
   theme3_1 = rootStyle.getPropertyValue("--theme3-1"),
   theme3_2 = rootStyle.getPropertyValue("--theme3-2"),
   theme3_3 = rootStyle.getPropertyValue("--theme3-3"),
+  theme3_4 = rootStyle.getPropertyValue("--theme3-4"),
   theme4_1 = rootStyle.getPropertyValue("--theme4-1"),
   theme4_2 = rootStyle.getPropertyValue("--theme4-2"),
   theme5_1 = rootStyle.getPropertyValue("--theme5-1"),
@@ -56,13 +57,14 @@ const filter_1 = document.querySelectorAll(".filter_1"),
   background_4 = document.querySelectorAll(".background_4"),
   background_5 = document.querySelectorAll(".background_5"),
   randomBg = document.querySelectorAll(".randomBg"),
-  theme2ColBlue = document.querySelector(".theme2ColBlue"),
-  theme2BgBlue = document.querySelector(".theme2BgBlue"),
-  theme2BgBlack = document.querySelectorAll(".theme2BgBlack"),
-  theme2BgYellow = document.querySelectorAll(".theme2BgYellow"),
-  theme2ColWhite = document.querySelectorAll(".theme2ColWhite"),
-  theme2ColBlack = document.querySelectorAll(".theme2ColBlack"),
-  theme2FilWhite = document.querySelectorAll(".theme2FilWhite");
+  themeEtcCol1 = document.querySelector(".themeEtcCol1"),
+  themeEtcBg1 = document.querySelector(".themeEtcBg1"),
+  themeEtcBg2 = document.querySelectorAll(".themeEtcBg2"),
+  themeEtcBg3 = document.querySelectorAll(".themeEtcBg3"),
+  themeEtcCol2 = document.querySelectorAll(".themeEtcCol2"),
+  themeEtcCol3 = document.querySelectorAll(".themeEtcCol3"),
+  themeEtcFil1 = document.querySelectorAll(".themeEtcFil1"),
+  shapes = document.querySelectorAll(".shape");
 
 // theme color 클릭 시 테마 변경 함수
 
@@ -122,43 +124,7 @@ document.documentElement.style.setProperty("--pseudoFilter", svgTheme1_5);
 document.documentElement.style.setProperty("--pseudoColor", theme1_2);
 document.documentElement.style.setProperty("--pseudoBorder", theme1_3);
 
-// theme 2 test
-
-filter_1.forEach((item) => (item.style.filter = svgTheme2_1));
-filter_2.forEach((item) => (item.style.filter = svgTheme2_2));
-filter_3.forEach((item) => (item.style.filter = svgTheme2_3));
-filter_4.forEach((item) => (item.style.filter = svgTheme2_1));
-filter_5.forEach((item) => (item.style.filter = svgThemeWhite));
-
-color_1.forEach((item) => (item.style.color = theme2_1));
-color_2.forEach((item) => (item.style.color = theme2_2));
-color_3.forEach((item) => (item.style.color = theme2_3));
-color_4.forEach((item) => (item.style.color = theme1_4));
-color_5.forEach((item) => (item.style.color = "white"));
-
-background_1.forEach((item) => (item.style.backgroundColor = theme2_1));
-background_2.forEach((item) => (item.style.backgroundColor = theme2_2));
-background_3.forEach((item) => (item.style.backgroundColor = theme2_3));
-background_4.forEach((item) => (item.style.backgroundColor = theme1_4));
-background_5.forEach((item) => (item.style.backgroundColor = theme1_5));
-
-document.documentElement.style.setProperty("--pseudoFilter", svgThemeWhite);
-document.documentElement.style.setProperty("--pseudoColor", theme2_1);
-document.documentElement.style.setProperty("--pseudoBorder", "white");
-
-console.log("테마 2이/가 선택되었습니다");
-waveColors = [theme2_1, theme2_2, theme2_3];
-document.body.style.backgroundColor = "black";
-visualText.forEach((item) => (item.style.color = "white"));
-theme2ColBlue.style.color = theme2_3;
-theme2BgBlue.style.backgroundColor = theme2_3;
-theme2ColWhite.forEach((item) => (item.style.color = "white"));
-theme2ColBlack.forEach((item) => (item.style.color = "black"));
-theme2BgBlack.forEach((item) => (item.style.backgroundColor = "black"));
-theme2BgYellow.forEach((item) => (item.style.backgroundColor = theme2_1));
-theme2FilWhite.forEach((item) => (item.style.filter = svgThemeWhite));
-
-//
+themeEtcBg3.forEach((item) => (item.style.backgroundColor = theme1_1));
 
 function themeColorChange(event) {
   const eventClassName = event.target.className;
@@ -189,9 +155,9 @@ function themeColorChange(event) {
     document.documentElement.style.setProperty("--pseudoFilter", svgTheme1_5);
     document.documentElement.style.setProperty("--pseudoColor", theme1_2);
     document.documentElement.style.setProperty("--pseudoBorder", theme1_3);
-  } else if (eventClassName.includes("theme2")) {
-    // theme 2 test
 
+    themeEtcBg3.forEach((item) => (item.style.backgroundColor = theme1_1));
+  } else if (eventClassName.includes("theme2")) {
     filter_1.forEach((item) => (item.style.filter = svgTheme2_1));
     filter_2.forEach((item) => (item.style.filter = svgTheme2_2));
     filter_3.forEach((item) => (item.style.filter = svgTheme2_3));
@@ -218,23 +184,130 @@ function themeColorChange(event) {
     waveColors = [theme2_1, theme2_2, theme2_3];
     document.body.style.backgroundColor = "black";
     visualText.forEach((item) => (item.style.color = "white"));
-    theme2ColBlue.style.color = theme2_3;
-    theme2BgBlue.style.backgroundColor = theme2_3;
-    theme2ColWhite.forEach((item) => (item.style.color = "white"));
-    theme2ColBlack.forEach((item) => (item.style.color = "black"));
-    theme2BgBlack.forEach((item) => (item.style.backgroundColor = "black"));
-    theme2BgYellow.forEach((item) => (item.style.backgroundColor = theme2_1));
-    theme2FilWhite.forEach((item) => (item.style.filter = svgThemeWhite));
-
-    //
+    themeEtcCol1.style.color = theme2_3;
+    themeEtcBg1.style.backgroundColor = theme2_3;
+    themeEtcCol2.forEach((item) => (item.style.color = "white"));
+    themeEtcCol3.forEach((item) => (item.style.color = "black"));
+    themeEtcBg2.forEach((item) => (item.style.backgroundColor = "black"));
+    themeEtcBg3.forEach((item) => (item.style.backgroundColor = theme2_1));
+    themeEtcFil1.forEach((item) => (item.style.filter = svgThemeWhite));
   } else if (eventClassName.includes("theme3")) {
+    filter_1.forEach((item) => (item.style.filter = svgTheme3_2));
+    filter_2.forEach((item) => (item.style.filter = svgTheme3_2));
+    filter_3.forEach((item) => (item.style.filter = svgTheme3_3));
+    filter_4.forEach((item) => (item.style.filter = svgTheme2_1));
+    filter_5.forEach((item) => (item.style.filter = svgThemeBlack));
+
+    color_1.forEach((item) => (item.style.color = theme3_4));
+    color_2.forEach((item) => (item.style.color = theme3_4));
+    color_3.forEach((item) => (item.style.color = theme3_4));
+    color_4.forEach((item) => (item.style.color = theme3_4));
+    color_5.forEach((item) => (item.style.color = theme3_4));
+
+    background_1.forEach((item) => (item.style.backgroundColor = theme3_1));
+    background_2.forEach((item) => (item.style.backgroundColor = theme3_2));
+    background_3.forEach((item) => (item.style.backgroundColor = theme3_3));
+    background_4.forEach((item) => (item.style.backgroundColor = theme1_4));
+    background_5.forEach((item) => (item.style.backgroundColor = theme1_5));
+
+    document.documentElement.style.setProperty("--pseudoFilter", svgThemeBlack);
+    document.documentElement.style.setProperty("--pseudoColor", theme3_2);
+    document.documentElement.style.setProperty("--pseudoBorder", theme3_4);
+
+    console.log("테마 3이/가 선택되었습니다");
+    waveColors = [theme3_1, theme3_2, theme3_1];
+    document.body.style.backgroundColor = "white";
+    visualText.forEach((item) => (item.style.color = theme3_2));
+    themeEtcCol1.style.color = theme3_2;
+    themeEtcBg1.style.backgroundColor = theme3_2;
+    themeEtcCol2.forEach((item) => (item.style.color = theme3_4));
+    themeEtcCol3.forEach((item) => (item.style.color = theme3_4));
+    themeEtcBg2.forEach((item) => (item.style.backgroundColor = "black"));
+    themeEtcBg3.forEach((item) => (item.style.backgroundColor = theme3_2));
+    themeEtcFil1.forEach((item) => (item.style.filter = svgThemeBlack));
+    shapes.forEach((item) => (item.style.filter = svgTheme3_1));
   } else if (eventClassName.includes("theme4")) {
+    filter_1.forEach((item) => (item.style.filter = svgTheme4_2));
+    filter_2.forEach((item) => (item.style.filter = svgTheme4_2));
+    filter_3.forEach((item) => (item.style.filter = svgTheme4_2));
+    filter_4.forEach((item) => (item.style.filter = svgTheme4_2));
+    filter_5.forEach((item) => (item.style.filter = "#333"));
+
+    color_1.forEach((item) => (item.style.color = theme4_2));
+    color_2.forEach((item) => (item.style.color = theme4_2));
+    color_3.forEach((item) => (item.style.color = theme4_2));
+    color_4.forEach((item) => (item.style.color = theme4_2));
+    color_5.forEach((item) => (item.style.color = "#555"));
+
+    background_1.forEach((item) => (item.style.backgroundColor = theme4_1));
+    background_2.forEach((item) => (item.style.backgroundColor = theme4_2));
+    background_3.forEach((item) => (item.style.backgroundColor = theme4_1));
+    background_4.forEach((item) => (item.style.backgroundColor = theme4_2));
+    background_5.forEach((item) => (item.style.backgroundColor = theme4_1));
+
+    document.documentElement.style.setProperty(
+      "--pseudoFilter",
+      "invert(33%) sepia(5%) saturate(11%) hue-rotate(30deg) brightness(93%) contrast(90%);"
+    );
+    document.documentElement.style.setProperty("--pseudoColor", "#555");
+    document.documentElement.style.setProperty("--pseudoBorder", "#555");
+
+    console.log("테마 4이/가 선택되었습니다");
+    waveColors = [theme4_2, "rgba(0, 0, 0, 0.7)", "rgba(0, 0, 0, 0.3)"];
+    document.body.style.backgroundColor = "white";
+    visualText.forEach((item) => (item.style.color = theme4_1));
+    themeEtcCol1.style.color = theme4_2;
+    themeEtcBg1.style.backgroundColor = theme4_2;
+    themeEtcCol2.forEach((item) => (item.style.color = theme4_2));
+    themeEtcCol3.forEach((item) => (item.style.color = "white"));
+    themeEtcBg2.forEach((item) => (item.style.backgroundColor = "white"));
+    themeEtcBg3.forEach((item) => (item.style.backgroundColor = theme4_2));
+    themeEtcFil1.forEach((item) => (item.style.filter = svgThemeBlack));
+    shapes.forEach((item) => (item.style.filter = svgTheme4_2));
   } else if (eventClassName.includes("theme5")) {
+    filter_1.forEach((item) => (item.style.filter = svgTheme2_1));
+    filter_2.forEach((item) => (item.style.filter = svgTheme2_2));
+    filter_3.forEach((item) => (item.style.filter = svgTheme2_3));
+    filter_4.forEach((item) => (item.style.filter = svgTheme2_1));
+    filter_5.forEach((item) => (item.style.filter = svgThemeWhite));
+
+    color_1.forEach((item) => (item.style.color = theme2_1));
+    color_2.forEach((item) => (item.style.color = theme2_2));
+    color_3.forEach((item) => (item.style.color = theme2_3));
+    color_4.forEach((item) => (item.style.color = theme1_4));
+    color_5.forEach((item) => (item.style.color = "white"));
+
+    background_1.forEach((item) => (item.style.backgroundColor = theme2_1));
+    background_2.forEach((item) => (item.style.backgroundColor = theme2_2));
+    background_3.forEach((item) => (item.style.backgroundColor = theme2_3));
+    background_4.forEach((item) => (item.style.backgroundColor = theme1_4));
+    background_5.forEach((item) => (item.style.backgroundColor = theme1_5));
+
+    document.documentElement.style.setProperty("--pseudoFilter", svgThemeWhite);
+    document.documentElement.style.setProperty("--pseudoColor", theme2_1);
+    document.documentElement.style.setProperty("--pseudoBorder", "white");
+
+    console.log("테마 5이/가 선택되었습니다");
+    waveColors = [
+      "rgba(255, 206, 50, 0.8)",
+      "rgba(255, 206, 50, 0.5)",
+      "rgba(255, 206, 50, 0.2)",
+    ];
+    document.body.style.backgroundColor = "black";
+    visualText.forEach((item) => (item.style.color = theme5_2));
+    themeEtcCol1.style.color = theme5_1;
+    themeEtcBg1.style.backgroundColor = theme5_1;
+    themeEtcCol2.forEach((item) => (item.style.color = "white"));
+    themeEtcCol3.forEach((item) => (item.style.color = "black"));
+    themeEtcBg2.forEach((item) => (item.style.backgroundColor = "black"));
+    themeEtcBg3.forEach((item) => (item.style.backgroundColor = theme2_1));
+    themeEtcFil1.forEach((item) => (item.style.filter = svgThemeWhite));
+
+    shapes.forEach((item) => (item.style.filter = svgTheme2_1));
   }
 }
 
-// shapes 변수와 함수
-const shapes = document.querySelectorAll(".shape");
+// shapes 함수
 
 function shapesMovement(e) {
   for (const item of shapes) {
