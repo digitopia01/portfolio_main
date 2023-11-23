@@ -250,7 +250,11 @@ function themeColorChange(event) {
     filter_2.forEach((item) => (item.style.filter = svgTheme4_2));
     filter_3.forEach((item) => (item.style.filter = svgTheme4_2));
     filter_4.forEach((item) => (item.style.filter = svgTheme4_2));
-    filter_5.forEach((item) => (item.style.filter = "#333"));
+    filter_5.forEach(
+      (item) =>
+        (item.style.filter =
+          "invert(50%) sepia(3%) saturate(12%) hue-rotate(352deg) brightness(92%) contrast(81%)")
+    );
 
     color_1.forEach((item) => (item.style.color = theme4_2));
     color_2.forEach((item) => (item.style.color = theme4_2));
@@ -266,7 +270,7 @@ function themeColorChange(event) {
 
     document.documentElement.style.setProperty(
       "--pseudoFilter",
-      "invert(33%) sepia(5%) saturate(11%) hue-rotate(30deg) brightness(93%) contrast(90%);"
+      "invert(33%) sepia(5%) saturate(11%) hue-rotate(30deg) brightness(93%) contrast(90%)"
     );
     document.documentElement.style.setProperty("--pseudoColor", "#555");
     document.documentElement.style.setProperty("--pseudoBorder", "#555");
