@@ -94,6 +94,8 @@
 #### 2023-11-22~23
 
 - 테마 컬러 `HOME, PRIMARY, COZY, B&W, B&Y `모두 적용 완료
+- `Navigation` 클릭 시 스크롤 이동 기능 구축
+- `Footer`의 높이가 작아서 스크롤 시 오류가 생김으로 `height`값을 더 줘서 디버깅 완료
 
 <img src="img/forreadme16.png">
 <img src="img/forreadme17.png">

@@ -235,7 +235,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
         transform: translate(-200px, 650px) scale(1) rotate(260deg);
       }
       &.footerposition {
-        transform: translate(760px, 350px) scale(0.2) rotate(30deg);
+        transform: translate(760px, 250px) scale(0.2) rotate(30deg);
       }
     }
     /* ------ SHAPE 2 ------ */
@@ -254,7 +254,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
         transform: translate(-280px, -90px) rotate(-45deg) scale(0.3);
       }
       &.footerposition {
-        transform: translate(420px, 580px) rotate(-45deg) scale(0.2);
+        transform: translate(420px, 510px) rotate(-45deg) scale(0.2);
       }
     }
     /* ------ SHAPE 3 ------ */
@@ -275,7 +275,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
         transform: translate(1700px, -200px) rotate(-50deg) scale(1.1);
       }
       &.footerposition {
-        transform: translate(320px, 140px) rotate(20deg) scale(0.2);
+        transform: translate(340px, 190px) rotate(20deg) scale(0.2);
       }
     }
   }
@@ -601,10 +601,10 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           content: "DEV LANGUAGE";
           width: 520px;
           font-weight: 900;
-          font-size: 45px;
-          opacity: 0.1;
+          font-size: 40px;
+          opacity: 0.05;
           position: absolute;
-          left: -20px;
+          left: 10px;
           top: -10px;
         }
       }
@@ -616,10 +616,10 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
           content: "DESIGN TOOLS";
           width: 520px;
           font-weight: 900;
-          font-size: 45px;
-          opacity: 0.1;
+          font-size: 40px;
+          opacity: 0.05;
           position: absolute;
-          left: -20px;
+          left: 10px;
           top: -10px;
         }
       }
@@ -1017,7 +1017,7 @@ $svg-theme5-2: invert(0%) sepia(0%) saturate(7482%) hue-rotate(343deg)
     }
   }
   footer {
-    height: 55vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

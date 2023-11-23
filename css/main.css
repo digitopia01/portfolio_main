@@ -164,7 +164,7 @@ canvas {
   transform: translate(-200px, 650px) scale(1) rotate(260deg);
 }
 #fixed .second_Page .shape1.footerposition {
-  transform: translate(760px, 350px) scale(0.2) rotate(30deg);
+  transform: translate(760px, 250px) scale(0.2) rotate(30deg);
 }
 #fixed .second_Page .shape2 {
   filter: invert(31%) sepia(67%) saturate(3227%) hue-rotate(337deg) brightness(107%) contrast(99%);
@@ -182,7 +182,7 @@ canvas {
   transform: translate(-280px, -90px) rotate(-45deg) scale(0.3);
 }
 #fixed .second_Page .shape2.footerposition {
-  transform: translate(420px, 580px) rotate(-45deg) scale(0.2);
+  transform: translate(420px, 510px) rotate(-45deg) scale(0.2);
 }
 #fixed .second_Page .shape3 {
   filter: invert(27%) sepia(90%) saturate(2444%) hue-rotate(217deg) brightness(100%) contrast(103%);
@@ -202,7 +202,7 @@ canvas {
   transform: translate(1700px, -200px) rotate(-50deg) scale(1.1);
 }
 #fixed .second_Page .shape3.footerposition {
-  transform: translate(320px, 140px) rotate(20deg) scale(0.2);
+  transform: translate(340px, 190px) rotate(20deg) scale(0.2);
 }
 
 /* 움직일 두번째 섹션. */
@@ -514,10 +514,10 @@ canvas {
   content: "DEV LANGUAGE";
   width: 520px;
   font-weight: 900;
-  font-size: 45px;
-  opacity: 0.1;
+  font-size: 40px;
+  opacity: 0.05;
   position: absolute;
-  left: -20px;
+  left: 10px;
   top: -10px;
 }
 #movement .con2 .con2_sub_heading .design {
@@ -529,10 +529,10 @@ canvas {
   content: "DESIGN TOOLS";
   width: 520px;
   font-weight: 900;
-  font-size: 45px;
-  opacity: 0.1;
+  font-size: 40px;
+  opacity: 0.05;
   position: absolute;
-  left: -20px;
+  left: 10px;
   top: -10px;
 }
 #movement .con2_main_lists {
@@ -916,7 +916,7 @@ canvas {
   text-align: center;
 }
 #movement footer {
-  height: 55vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,4 +1,23 @@
+// nav 클릭 시 스크롤 이동
+
+const gnbItems = document.querySelectorAll(".nav");
+const section = document.querySelectorAll(".section");
+
+gnbItems.forEach((gnbItem, index) => {
+  gnbItem.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const sectionTop = section[index].offsetTop;
+
+    window.scrollTo({
+      top: sectionTop,
+      behavior: "smooth",
+    });
+  });
+});
+
 // css root 컬러 변수 가져오기
+
 const root = document.documentElement;
 const rootStyle = getComputedStyle(root);
 const theme1_1 = rootStyle.getPropertyValue("--theme1-1"),
@@ -359,11 +378,10 @@ window.addEventListener("scroll", () => {
 });
 
 // scroll 감지에 따른 페이지 이동
-const elm = document.querySelectorAll(".section");
-const elmCount = elm.length;
+const sectionCount = section.length;
 let isScrolling = false;
 
-elm.forEach(function (item, index) {
+section.forEach(function (item, index) {
   item.addEventListener("wheel", function (event) {
     event.preventDefault();
 
@@ -379,25 +397,26 @@ elm.forEach(function (item, index) {
       } else if (event.detail) delta = -event.detail / 3;
 
       let moveTop = window.scrollY;
-      let elmSelector = elm[index];
+      let sectionSelector = section[index];
 
       // wheel down: move to next section
       if (delta < 0) {
-        if (elmSelector !== elmCount - 1) {
+        if (sectionSelector !== sectionCount - 1) {
           try {
             moveTop =
               window.pageYOffset +
-              elmSelector.nextElementSibling.getBoundingClientRect().top;
+              sectionSelector.nextElementSibling.getBoundingClientRect().top;
           } catch (e) {}
         }
       }
       // wheel up: move to previous section
       else {
-        if (elmSelector !== 0) {
+        if (sectionSelector !== 0) {
           try {
             moveTop =
               window.pageYOffset +
-              elmSelector.previousElementSibling.getBoundingClientRect().top;
+              sectionSelector.previousElementSibling.getBoundingClientRect()
+                .top;
           } catch (e) {}
         }
       }
@@ -435,7 +454,7 @@ const sectionButtons = document.querySelectorAll(".section-button");
 
 sectionButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
-    const targetSection = elm[index];
+    const targetSection = section[index];
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 });
