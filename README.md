@@ -108,6 +108,8 @@
 - con3 `방향 감지 호버`를 통한 이벤트 구축
 - 출처 : https://freelance-drupal.com/en/blog/direction-aware-hover-effect-in-pure-css3-and-javascript
 
+<img src="img/forreadme21.png">
+
 ### Agenda
 
 - con1 more about me 버튼 클릭 시 모달 창으로 설명 나오게하기
