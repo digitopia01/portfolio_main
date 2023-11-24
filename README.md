@@ -103,8 +103,14 @@
 <img src="img/forreadme19.png">
 <img src="img/forreadme20.png">
 
+#### 2023-11-24
+
+- con3 `방향 감지 호버`를 통한 이벤트 구축
+- 출처 : https://freelance-drupal.com/en/blog/direction-aware-hover-effect-in-pure-css3-and-javascript
+
 ### Agenda
 
+- con1 more about me 버튼 클릭 시 모달 창으로 설명 나오게하기
 - con2 내용 전체적으로 변경할 필요 있음
   - Design Tools 의 경우 이미지를 넣는 것이 어떨지 구상해보기
 - con3 hover시 이벤트 js로 만들어보기
