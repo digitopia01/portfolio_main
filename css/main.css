@@ -1064,6 +1064,7 @@ canvas {
 
 .content {
   flex: 1;
+  height: 500px;
 }
 
 .overlay {

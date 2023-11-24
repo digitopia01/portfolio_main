@@ -479,7 +479,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         if (!event) event = window.event;
         if (event.wheelDelta) {
-          delta = event.wheelDelta / 120;
+          delta = event.wheelDelta / 240;
+          console.log(delta);
           if (window.opera) delta = -delta;
         } else if (event.detail) delta = -event.detail / 3;
 
