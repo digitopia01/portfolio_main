@@ -480,7 +480,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (!event) event = window.event;
         if (event.wheelDelta) {
           delta = event.wheelDelta / 240;
-          console.log(delta);
           if (window.opera) delta = -delta;
         } else if (event.detail) delta = -event.detail / 3;
 
@@ -514,6 +513,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         setTimeout(function () {
           isScrolling = false;
         }, 300); // 0.3초 동안 감지하지 않도록 설정
+        console.log(delta);
       }
     });
   });
