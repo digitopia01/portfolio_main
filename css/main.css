@@ -365,6 +365,19 @@ canvas {
   justify-content: center;
   align-items: center;
   gap: 0 100px;
+  position: relative;
+}
+#movement .con1 .modalbox {
+  position: absolute;
+}
+#movement .con1 .con1_content {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 100px;
 }
 #movement .con1 .con1_pic {
   width: 550px;
